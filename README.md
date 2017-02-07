@@ -11,3 +11,14 @@ This repository has our Brewfile, which has everything we use in all our project
 Using a Brewfile helps us with our Infrastructure as Code (IaC) initiatives.
 
 Feedback welcome. Pull requests welcome.
+
+To install brwe-file and use this Brewfile:
+
+    $ brew install rcmdnk/file/brew-file
+
+    $ brew file init                    
+    Do you want to set a repository (y)? ((n) for local Brewfile). [y/n]: y
+    Set repository, "non" for local Brewfile,
+    <user>/<repo> for github repository,
+    or full path for the repository: joelparkerhenderson/Brewfile 
+
