@@ -363,9 +363,6 @@ brew 'unison'
 # Syncthing is open source file sharing.
 brew 'syncthing'
 
-# BitTorrent Sync is closed source file sharing.
-cask 'bittorrent-sync'
-
 # Dropbox file sharing.
 cask 'dropbox'
 
@@ -690,9 +687,6 @@ cask 'arq'
 cask 'atext'
 
 # TDB
-cask 'audacity'
-
-# TDB
 cask 'backblaze-downloader'
 
 # TDB
@@ -760,9 +754,6 @@ cask 'evernote'
 
 # FileZilla FTP client
 cask 'filezilla'
-
-# Flash multimedia player
-cask 'flash'
 
 # TDB
 cask 'fluid'
@@ -2243,7 +2234,6 @@ cask 'adobe-reader'
 cask 'flip4mac'
 cask 'google-hangouts'
 cask 'inky'
-cask 'node'
 cask 'obs'
 cask 'pandoc'
 cask 'prey'
@@ -2381,9 +2371,6 @@ cask 'virtualbox'
 
 # Terraform common configuration to launch infrastructure.
 brew 'terraform'
-
-# corectl provides CoreOS over macOS made very simple
-cask 'corectl'
 
 # Kubernetes Solo cluster for macOS
 cask 'kube-solo'
