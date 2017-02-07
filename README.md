@@ -1,5 +1,7 @@
 # Brewfile
 
+<img src="README.png" alt="Brewfile" style="width: 100%;"/>
+
 We use Homebrew a.k.a. Brew to install software on our macOS computers.
 
 See http://brew.sh/ and http://homebrew-file.readthedocs.io/
