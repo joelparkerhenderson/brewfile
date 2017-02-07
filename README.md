@@ -1,4 +1,4 @@
-# Brewfile
+# Brewfile for macOS
 
 <img src="README.png" alt="Brewfile" style="width: 100%;"/>
 
