@@ -101,7 +101,8 @@ cask 'lastpass'
 ##
 # Terminals
 #
-# We typically use `tmux`, and sometimes fall back on `screen`.
+# We typically use `tmux`, `tmate`,
+# and sometimes fall back on `screen`.
 ##
 
 # iTerm is our favorite terminal app.
@@ -114,6 +115,9 @@ cask 'iterm2'
 #     brew 'pkg-config' && brew link pkg-config && brew 'tmux'
 #
 brew 'tmux'
+
+# tmate is a fork of tmux that makes screen sharing friendlier.
+brew 'tmate'
 
 # Screen is an older terminal multiplexer.
 brew 'homebrew/dupes/screen'
