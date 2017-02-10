@@ -122,6 +122,9 @@ brew 'tmate'
 # Screen is an older terminal multiplexer.
 brew 'homebrew/dupes/screen'
 
+# ngrok opens a secure tunnel to localhost
+brew 'ngrok'
+
 ##
 # Shells
 #
