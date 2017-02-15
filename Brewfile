@@ -249,6 +249,9 @@ brew 'git-url-sub'
 # SourceTree graphic client for git
 cask 'sourcetree'
 
+# GitUp friendly Git interface and visualizer
+cask 'gitup'
+
 # Mercurial version control system.
 brew 'hg'
 
