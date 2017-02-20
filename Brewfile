@@ -486,7 +486,7 @@ brew 'boot2docker'
 
 # Consul tool for discovering and configuring services in your infrastructure
 brew 'consul'
-      
+
 # Monit is for managing and monitoring Unix systems.
 brew 'monit'
 
@@ -2378,6 +2378,7 @@ cask 'docker'
 
 # Vagrant creates and configures portable development environments.
 cask 'vagrant'
+cask 'vagrant-manager'
 
 # VirtualBox creates and configures portable development environments, by Oracle.
 cask 'virtualbox'
