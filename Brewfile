@@ -2670,6 +2670,20 @@ brew 'taylor'
 cask 'testflight'
 
 ##
+# Platforms
+##
+
+# Amazon Web Services (AWS) Command Line Interface (CLI)
+brew install awscli
+
+# AWS command line tools
+brew tap wallix/awless
+brew 'awless'
+
+# Heroku app hosting
+brew install heroku
+
+##
 # Art editors
 ##
 
