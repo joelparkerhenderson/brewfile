@@ -2701,7 +2701,10 @@ brew tap homebrew/gui
 cask 'gimp'
 
 # Inkscape vector-based image  editor, similar to Adobe Illustrator
-cask 'inkscape; brew 'inkscape''
+cask 'inkscape'
+
+# Shotcut movie editor
+cask 'shotcut'
 
 ##
 # Paid software
