@@ -222,6 +222,9 @@ brew 'cvs'
 brew 'git'
 cask 'git'
 
+# Git Large File Storage
+brew 'git-lfs'
+
 # TODO
 brew 'git-cola'
 
