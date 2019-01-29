@@ -1,4 +1,4 @@
-# Brewfile for macOS Homebrew bundle software management
+# Brewfile for macOS software management
 
 <img src="README.png" alt="Brewfile" style="width: 100%;"/>
 

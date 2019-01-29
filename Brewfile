@@ -5,50 +5,44 @@
 # This is a work in progress. Use at your own discretion.
 #
 # This file installs many apps, including office suites, multimedia suites,
-# programming langauges and IDEs, unix utilities, and sysadmin tools.
+# programming langauges, unix utilities, sysadmin tools, and fonts.
 #
 # This file is organized in meaningful sections because we want to
 # make it easy for you to pick and choose sections that you want.
 #
-# ## Taps
+# There are many TODO items in this file. If you want, help us
+# describe these and organize them into the relevant sections.
 #
-# We do not use tap in this file; instead, we use full paths.
-# This is because we want to be as clear as possible about what
-# is being installed, and from what locations.
+# To learn about Brewfile capabilties, please see:
 #
-# ## Dupes
+#   * http://brew.sh/
+#   * http://homebrew-file.readthedocs.io/
+#   * https://github.com/Homebrew/homebrew-bundle
 #
-# We generaly prefer homebrew/dupes to preinstalled Mac software.
+# Feedback welcome. Pull requests welcome.
+#
+# ## Usage
+#
+# To use this Brewfile via `brew bundle`:
+#
+#     $ brew bundle
+#
+# To use this Brewfile via `brew-file`, which has more capabilties than bundle:
+#
+#     $ brew install rcmdnk/file/brew-file
+#     $ brew file init                    
+#     Do you want to set a repository (y)? ((n) for local Brewfile). [y/n]: y
+#     Set repository, "non" for local Brewfile,
+#     <user>/<repo> for github repository,
+#     or full path for the repository: joelparkerhenderson/brewfile
+#
+# ## Mac tools vs. GNU tools
+#
+# We generaly prefer GNU tools over preinstalled Mac software tools.
 # For example, we prefer the GNU `sed` command vs. macOS `sed` command.
+#
 # However, we have seen this cause conflicts with macOS software that
 # isn't aware of GNU; therefore we install the dupes in parallel.
-#
-# ## Contents
-#
-# This file has a bunch of sections:
-#
-#   * Browsers: firefox, google-chrome, opera, ...
-#   * Shells: bash, zsh, fish, mosh, ...
-#   * Terminals: iterm2, tmux, screen, ...
-#   * Passwords: pass, keybase, bitwarden, ...
-#   * Editors: vim, emacs, atom, sublime, ...
-#   * Downloaders: curl, wget, cask, carthage, ...
-#   * Version control: git, hg, svn, cvs, ...
-#   * GNU command line tools
-#   * System related: TODO
-#   * File compression: zstd, unrar, unzip, ...
-#   * File synchronization: rsync, unison, syncthing, ...
-#   * Text search: ripgrep, ag, sift, ...
-#   * Operating-related
-#   * Build tools
-#   * Fonts: hundreds of fonts
-#   * JetBrains programmer tools
-#   * OmniGroup project management tools
-#   * Database servers: postgresql, mysql, redis, ...
-#   * Database searchers: sphinx, TODO
-#   * Database managers: TODO
-#   * Markup languages: pandoc, TODO
-#   * Programming languages: Java, Node, Python, ...
 #
 # ## See Also
 #
@@ -67,10 +61,10 @@
 ##
 
 ##
-# Taps
+# Preflight
 ##
 
-# Basics
+# Tap homebrew
 tap 'homebrew/cask'
 tap 'homebrew/core'
 tap 'homebrew/boneyard'
@@ -78,21 +72,11 @@ tap 'homebrew/dev-tools'
 tap 'homebrew/bundle'
 tap 'homebrew/services'
 
-# Cask
+# Tap caskroom
 tap 'caskroom/cask'
 tap 'caskroom/drivers'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
-
-# Third-party taps
-tap 'denji/nginx'
-tap 'koekeishiya/formulae'
-tap 'hbang/repo'
-tap 'charizteam/chariz'
-
-##
-# Preflight
-##
 
 # Homebrew Cask extends Homebrew to install OS X applications and large binaries.
 brew 'cask'
