@@ -1,9 +1,8 @@
 ##
 # Brewfile by Joel Parker Henderson and SixArm.com
 #
-# CAUTION: THIS IS A WORK IN PROGRESS. USE AT YOUR OWN RISK.
-#
 # We use this Brewfile for our teams and their developer laptops.
+# This is a work in progress. Use at your own discretion.
 #
 # This file installs many apps, including office suites, multimedia suites,
 # programming langauges and IDEs, unix utilities, and sysadmin tools.
@@ -29,7 +28,7 @@
 # This file has a bunch of sections:
 #
 #   * Browsers: firefox, google-chrome, opera, ...
-#   * Passwords: keybase, 1password, lastpass, ...
+#   * Passwords: pass, keybase, bitwarden, ...
 #   * Terminals: iterm2, tmux, screen, ...
 #   * Shells: bash, zsh, fish, mosh, ...
 #   * Editors: vim, emacs, atom, sublime, ...
@@ -45,7 +44,7 @@
 #   * Fonts: hundreds of fonts
 #   * JetBrains programmer tools
 #   * OmniGroup project management tools
-#   * Database servers: postgresql, redis, ...
+#   * Database servers: postgresql, mysql, redis, ...
 #   * Database searchers: sphinx, TODO
 #   * Database managers: TODO
 #   * Markup languages: pandoc, TODO
@@ -60,11 +59,11 @@
 # ## Tracking
 #
 # * Package: https://github.com/joelparkerhenderson/brewfile
-# * Version: 0.2.0
+# * Version: 2.3.0
 # * Created: 2017-01-01
-# * Updated: 2017-02-07
+# * Updated: 2019-01-28
 # * License: GPL
-# * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+# * Contact: Joel Parker Henderson (http://joelparkerhenderson.com)
 ##
 
 ##
@@ -82,6 +81,10 @@ cask 'google-chrome'
 # Opera web browser
 cask 'opera'
 
+# Brow.sh text browser
+#tap 'browsh-org/homebrew-browsh'
+#brew 'browsh'
+
 ##
 # Passwords
 #
@@ -89,8 +92,14 @@ cask 'opera'
 # If you don't use these, feel free to delete them.
 ##
 
+# Pass, a Unix password manager for the command line
+brew 'pass'
+
 # Keybase.io digital signature manager
 brew 'keybase'
+
+# Authy password manager, which is cross-platform
+cask 'authy'
 
 # 1password is a password manager
 cask '1password'
@@ -156,6 +165,12 @@ brew 'mobile-shell'
 # and sometimes use GUI editors (atom, sublime, etc.)
 ##
 
+# bat is like `cat` plus line numbers, syntax highlighting, and more.
+brew 'bat'
+
+# Most is a powerful paging program; compare `less` and `more`.
+brew 'most'
+
 # Vim editor
 brew 'vim'
 
@@ -164,6 +179,14 @@ cask 'macvim'
 
 # Emacs editor
 cask 'emacs'
+
+## Emacs items that may help. TODO decide on these.
+#sudo rm /usr/bin/emacs &&
+#sudo rm -rf /usr/share/emacs &&
+#brew 'emacs --cocoa --srgb --use-git-head --HEAD &&'
+#ls -1 /usr/local/Cellar/emacs/*/bin/emacs |
+#tail -1 |
+#xargs -I{} sudo ln -sf "{}" /usr/bin/emacs
 
 # Emacs editor for Spacemacs
 # TODO: brew tap d12frosted/emacs-plus
@@ -186,6 +209,13 @@ brew 'enca'
 cask 'mactex'
 
 ##
+# Office software
+##
+
+# LibreOffice is a large editor for text, spreadsheets, diagrams.
+cask 'libreoffice'
+
+##
 # Downloaders
 #
 # These items download files and fetch content from the network.
@@ -205,6 +235,9 @@ brew 'httrack'
 
 # Wget is a free software package for retrieving files using HTTP and FTP.
 brew 'wget'
+
+# GNU inetutils contains telnet, ftp, etc.
+brew 'inetutils'
 
 ##
 # Version control
@@ -249,11 +282,11 @@ brew 'git-now'
 # TODO
 brew 'git-url-sub'
 
-# SourceTree graphic client for git
-cask 'sourcetree'
-
 # GitUp friendly Git interface and visualizer
 cask 'gitup'
+
+# SourceTree graphic client for git
+cask 'sourcetree'
 
 # Mercurial version control system.
 brew 'hg'
@@ -326,6 +359,9 @@ brew 'automake'
 # GNU Privacy Guard (GnuPG) provides encryption as a free replacement for PGP.
 brew 'gpg'
 
+# GNU Privacy Guard (GnuPG) PIN entry for macOS to do GPG terminal decryption
+brew 'pinentry-mac'
+
 # OpenSSL is an open-source implementation of the SSL and TLS protocols.
 brew 'openssl'
 
@@ -344,6 +380,9 @@ brew 'pkg-config'
 # PCRE: Perl-compatible regular expressions, for better searching.
 brew 'pcre'
 brew 'pcre++'
+
+# fd: a simple, fast and user-friendly alternative to find.
+brew 'fd'
 
 ##
 # File compression/uncompression
@@ -388,7 +427,7 @@ cask 'box-sync'
 ##
 # Text search
 #
-# We prefer ripgrep because it is very fast and very safe.#
+# We prefer ripgrep because it is very fast and very safe.
 ##
 
 # ripgrep is text search; we prefer it over grep, ag, git grep, ucg, pt, sift.
@@ -405,6 +444,81 @@ brew install sift
 
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
+
+# xsv is for CSV file parsing, and is fast, full featured, and flexible.
+brew 'xsv'
+
+# Tad is CSV viewer with features for pivot, search, etc.
+cask 'tad'
+
+##
+# Cross-platform tooling
+#
+# These installations tend to be large.
+##
+
+# Qt cross-platform software development
+brew 'qt5'
+
+# WINE runs Windows applications on other operating systems.
+brew 'wine'
+
+# Xquartz X.Org X Window System that runs on OS X; needed for some image software.
+cask 'xquartz'
+
+##
+# Multimedia
+##
+
+# Image libraries
+brew 'libgphoto2'
+brew 'libpng'
+brew 'libtiff'
+
+# VLC media player
+cask 'vlc'
+
+# GraphicsMagick is the swiss army knife of image processing.
+brew 'graphicsmagick'
+
+# TODO
+brew 'graphviz'
+
+# Gnuplot is a portable command-line driven graphing utility.
+brew 'gnuplot'
+
+# yEd is desktop application to generate high-quality diagrams.
+cask 'yed'
+
+# Tap GUI
+brew tap homebrew/gui
+
+# Gimp pixel-based image editor, similar to Adobe Photoshop
+cask 'gimp'
+
+# Inkscape vector-based image editor, similar to Adobe Illustrator
+cask 'inkscape'
+
+# Blender 3D modeller
+cask 'blender'
+
+# Jasper command line transcoder between JPEG2000 and other formats.
+brew 'jasper'
+
+# Shotcut movie editor
+cask 'shotcut'
+
+# Image optimizer
+cask 'imageoptim'
+
+# Freemind mind map editor
+cask 'freemind'
+
+# Calibre ebook reader and manager
+cask 'calibre'
+
+# Kindle book reader by Amazon
+cask 'kindle'
 
 ##
 # Google software
@@ -439,29 +553,20 @@ cask 'google-web-designer'
 
 ##################### TODO ####################################
 
-# GraphicsMagick is the swiss army knife of image processing.
-brew 'graphicsmagick'
-
-# TODO
-brew 'graphviz'
-
-# Gnuplot is a portable command-line driven graphing utility.
-brew 'gnuplot'
-
 # TODO
 brew 'html-xml-utils'
 
 # TODO
 brew 'lynx'
 
-# Most is a powerful paging program; compare `less` and `more`.
-brew 'most'
-
 # Mutt is a small powerful text-based mail client.
 brew 'mutt'
 
 # Netcat is a networking utility for the TCP/IP protocol.
 brew 'netcat'
+
+# prettyping: ping with colorful output and progress bars
+brew 'prettyping'
 
 # TODO
 brew 'ncdu'
@@ -481,7 +586,9 @@ brew 'tree'
 # xclip is a command line interface to the X11 clipboard.
 brew 'xclip'
 
-## Server-Related
+##
+# Server-Related
+##
 
 # Docker software containers to help distribute applications.
 brew 'docker'
@@ -502,7 +609,7 @@ brew 'monit'
 # Nagios IT infrastructure monitoring.
 brew 'nagios'
 
-# TODO
+# NGINX web server.
 brew 'nginx'
 
 # Varnish reverse-proxy web application accelerator.
@@ -531,16 +638,12 @@ brew 'fontconfig'
 # FreeType is a freely available software library to render fonts.
 brew 'freetype'
 
+# Command-line programs for manipulating fonts
+brew 'lcdf-typetools'
+
 ##
 # Image-Related
 ##
-
-brew 'libgphoto2'
-brew 'libpng'
-brew 'libtiff'
-
-# Jasper command line transcoder between JPEG2000 and other formats.
-brew 'jasper'
 
 ## Uncategorized
 
@@ -602,7 +705,6 @@ brew 'libmemcached'
 brew 'memcached'
 
 brew 'scrypt'
-brew 'qt5'
 
 # Tarsnap is a secure online backup service for Unix.
 brew 'tarsnap'
@@ -610,9 +712,6 @@ brew 'tarsnap'
 # Valkyrie is a Qt4-based GUI for the Memcheck and Helgrind tools in Valgrind.
 # Commented-out because it's currently incompatible with macOS 10.12.
 #brew 'valkyrie'
-
-# WINE runs Windows applications on other operating systems.
-brew 'wine'
 
 # Xapian is an open-source search engine library.
 brew 'xapian'
@@ -709,6 +808,9 @@ cask 'arq'
 cask 'atext'
 
 # TDB
+cask 'audacity'
+
+# TDB
 cask 'backblaze-downloader'
 
 # TDB
@@ -725,9 +827,6 @@ cask 'basecamp'
 
 # TDB
 cask 'beacon-scanner'
-
-# TDB
-cask 'blender'
 
 # TDB
 cask 'brain-workshop'
@@ -774,8 +873,8 @@ cask 'easysimbl'
 # TDB
 cask 'evernote'
 
-# FileZilla FTP client
-cask 'filezilla'
+# Flash multimedia player
+cask 'flash'
 
 # TDB
 cask 'fluid'
@@ -798,8 +897,6 @@ cask 'github'
 # TDB
 cask 'gitx'
 
-###################
-
 # TDB
 cask 'grooveshark'
 
@@ -813,16 +910,10 @@ cask 'hockey'
 cask 'hipchat'
 
 # TDB
-cask 'iterm2'
-
-# TDB
 cask 'joinme'
 
 # TDB
 cask 'jumpcut'
-
-# Kindle book reader by Amazon
-cask 'kindle'
 
 # TDB
 cask 'krita'
@@ -832,9 +923,6 @@ cask 'launchy'
 
 # TDB
 cask 'little-snitch'
-
-# LibreOffice is a large editor for text, spreadsheets, diagrams.
-cask 'libreoffice'
 
 # TODO
 cask 'mysqlworkbench'
@@ -908,9 +996,6 @@ cask 'synergy'
 # TODO
 cask 'thisservice'
 
-# Thunderbird email client by Mozilla.
-cask 'thunderbird'
-
 # TODO
 cask 'transmit'
 
@@ -922,9 +1007,6 @@ cask 'todos'
 
 # Unison file synchronizer.
 cask 'unison'
-
-# VLC media player
-cask 'vlc'
 
 ##
 # Extras
@@ -1916,7 +1998,6 @@ cask 'vlc'
 # brew 'ssh-copy-id'
 # brew 'sshfs'
 # brew 'sshguard'
-# brew 'sshuttle'
 # brew 'ssldump'
 # brew 'sslscan'
 # brew 'ssss'
@@ -2266,7 +2347,12 @@ cask 'unity3d'
 cask 'zoomus'
 
 
-## Mac App Store
+##
+# Mac App Store
+#
+# We use the Mac App Store only when an app is not available
+# in a comparable way via brew cask.
+##
 
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
@@ -2335,12 +2421,17 @@ cask 'bats'
 # Shuttle: simple SSH shortcut menu
 cask 'shuttle'
 
+# FileZilla FTP client by Mozilla.
+cask 'filezilla'
+
+# Thunderbird email client by Mozilla.
+cask 'thunderbird'
+
 # Fugu: a graphical shell for SSH and FTP.
 cask 'fugu'
 
 # Charles: enables a developer to view HTTP traffic.
 cask 'charles'
-
 
 ##
 # Languages
@@ -2371,7 +2462,8 @@ cask 'tunnelblick'
 ##
 
 # Wireshark network monitoring, with the QT GUI.
-brew link cmake; cask 'wireshark --with-qt'
+brew 'cmake', link: true
+cask 'wireshark --with-qt'
 
 # Wireshark-chmodbft enables regular users to capture network packets.
 cask 'wireshark-chmodbpf'
@@ -2381,26 +2473,6 @@ cask 'charles'
 
 # Siege is an http load testing and benchmarking utility.
 brew 'siege'
-
-##
-# Virtual environments
-##
-
-# Docker assembles applications from components.
-cask 'docker'
-
-# Vagrant creates and configures portable development environments.
-cask 'vagrant'
-cask 'vagrant-manager'
-
-# VirtualBox creates and configures portable development environments, by Oracle.
-cask 'virtualbox'
-
-# Terraform common configuration to launch infrastructure.
-brew 'terraform'
-
-# Kubernetes Solo cluster for macOS
-cask 'kube-solo'
 
 ##
 # IDE
@@ -2451,6 +2523,10 @@ cask 'postgres'
 # Postgres admin GUI
 brew 'pgadmin3'
 
+# Prisma replaces traditional ORMs and adds GraphQL
+tap 'prisma/prisma'
+brew 'prisma'
+
 # RabbitMQ enterprise message queue based on the emerging AMQP standard.
 brew 'rabbitmq'
 
@@ -2461,19 +2537,20 @@ brew 'redis'
 brew 'riak'
 
 # SQLite database: self-contained, serverless, zero-configuration, transactional engine.
-brew 'sqlite && brew link sqlite'
+brew 'sqlite', link: true
 
 # ZeroMQ message queue
 brew 'zeromq'
 
 ##
 # Database searchers
-#
-# TODO: add more here
 ##
 
-# Sphinx search engine.
-brew link cmake; brew 'mysql; brew install postgresql; brew install sphinx'
+# Sphinx search engine, which runs on top of MySQL and/or PostgreSQL.
+brew 'cmake', link: true
+brew 'mysql'
+brew 'postgresql'
+brew 'sphinx'
 
 ##
 # Database managers
@@ -2482,7 +2559,8 @@ brew link cmake; brew 'mysql; brew install postgresql; brew install sphinx'
 ##
 
 # MySQL Workbench database editor.
-brew link cmake; cask 'mysqlworkbench'
+brew 'cmake', link: true
+cask 'mysqlworkbench'
 
 # Realm browser mobile database editor.
 cask 'realm-browser'
@@ -2495,6 +2573,19 @@ cask 'toad'
 
 # Valentina Studio database manager.
 cask 'valentina-studio'
+
+##
+# Data analytics
+##
+
+# Elasticsearch is a real-time, distributed storage, search, and analytics engine.
+brew 'elasticsearch'
+
+# Logstash helps parse, enrich, transform, and buffer data from a variety of sources.
+brew 'logstash'
+
+# Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. 
+brew 'kibana'
 
 ##
 # Markup languages
@@ -2515,6 +2606,9 @@ cask 'macdown'
 
 # StarUML modeling tool
 cask 'staruml'
+
+# PlantUML markup text to diagram
+brew 'plantuml'
 
 ## XML
 
@@ -2623,8 +2717,9 @@ brew 'python3'
 
 ## R
 
-# R programming language, esp. for statistics.
+# R programming language, esp. for statistics. TODO: which R do we want?
 brew 'r'
+cask 'r'
 
 ## Ruby
 
@@ -2677,8 +2772,31 @@ brew 'taylor'
 cask 'testflight'
 
 ##
+# Programming processes
+##
+
+## Continuous automation
+
+# Jenkins open source automation server for continuous integration
+brew 'jenkins'
+
+## Testing
+
+# Selenium standalone server
+brew 'selenium-server-standalone'
+
+# Selenium webdriver for Chrome browser
+brew 'chromedriver'
+
+# Selenimum webdriver for Firefox browser
+brew 'geckodriver'
+
+##
 # Platforms
 ##
+
+# Azure by Microsoft
+brew 'azure-cli'
 
 # Amazon Web Services (AWS) Command Line Interface (CLI)
 brew install awscli
@@ -2688,26 +2806,42 @@ brew tap wallix/awless
 brew 'awless'
 
 # Heroku app hosting
-brew install heroku
+brew 'heroku'
 
-##
-# Art editors
-##
+# Heroku hosting utilities
+cask 'heroku-toolbelt'
 
-# Xquarts
-cask 'xquartz'
+# corectl provides CoreOS over macOS made very simple
+cask 'corectl'
 
-# Tap GUI
-brew tap homebrew/gui
+## Virtual machines
 
-# Gimp pixel-based image editor, similar to Adobe Photoshop
-cask 'gimp'
+# VirtualBox creates and configures portable development environments, by Oracle.
+cask 'virtualbox'
 
-# Inkscape vector-based image  editor, similar to Adobe Illustrator
-cask 'inkscape'
+# Vagrant lightweight, reproducible, portable development environments
+cask 'vagrant'
+cask 'vagrant-manager'
 
-# Shotcut movie editor
-cask 'shotcut'
+## Provisioning
+
+# Terraform common configuration to launch infrastructure.
+brew 'terraform'
+
+## Configuration management
+
+# Ansible is a simple way to automate apps and IT infrastructure.
+brew 'ansible'
+
+## Containeriztion
+
+# Docker assembles applications from components.
+cask 'docker'
+
+## Orchestration
+
+# Kubernetes Solo cluster for macOS
+cask 'kube-solo'
 
 ##
 # Paid software
@@ -2838,31 +2972,15 @@ brew 'libyaml'
 # ZIP file compression
 brew 'libzip'
 
+# YAML lint validator
+brew 'yamllint'
+
 # Images
 brew 'libjpg'
 brew 'libpng'
 brew 'libtiff'
 brew 'libwebp'
 
-##
-# brew-install-our-tech-packages-manually.sh
-#
-# Use Homebrew to install our favorite tech-related packages
-# that may need to be installed manually because of passwords,
-# or moving files, or more-complex issues that need a human.
-#
-##
-
-# Update - this is always the first step
-brew update
-
-# Emacs editor.
-sudo rm /usr/bin/emacs &&
-sudo rm -rf /usr/share/emacs &&
-brew 'emacs --cocoa --srgb --use-git-head --HEAD &&'
-ls -1 /usr/local/Cellar/emacs/*/bin/emacs |
-tail -1 |
-xargs -I{} sudo ln -sf "{}" /usr/bin/emacs
 
 ## Networking
 
@@ -2872,6 +2990,9 @@ cask 'nmap'
 # Wireshark network protocol analyzer
 cask 'wireshark'
 
+# Certbot: automatically enable HTTPS on your website via Let's Encrypt
+brew 'certbot'
+
 ## Programming
 
 # Netbeans Java IDE
@@ -2879,14 +3000,6 @@ cask 'netbeans'
 
 # R statistics programming language
 cask 'r'
-
-## Deployments
-
-# Vagrant lightweight, reproducible, portable development environments
-cask 'vagrant'
-
-# Heroku hosting utilities
-cask 'heroku-toolbelt'
 
 ##
 # Fonts
@@ -3963,7 +4076,3 @@ brew 'protobuf-c'
 # Thrift network serialization protocol; compare protobuf.
 brew 'thrift'
 
-## Tools
-
-# Ansible is a simple way to automate apps and IT infrastructure.
-brew 'ansible'
