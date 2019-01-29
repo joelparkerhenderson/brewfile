@@ -28,9 +28,9 @@
 # This file has a bunch of sections:
 #
 #   * Browsers: firefox, google-chrome, opera, ...
-#   * Passwords: pass, keybase, bitwarden, ...
-#   * Terminals: iterm2, tmux, screen, ...
 #   * Shells: bash, zsh, fish, mosh, ...
+#   * Terminals: iterm2, tmux, screen, ...
+#   * Passwords: pass, keybase, bitwarden, ...
 #   * Editors: vim, emacs, atom, sublime, ...
 #   * Downloaders: curl, wget, cask, carthage, ...
 #   * Version control: git, hg, svn, cvs, ...
@@ -91,6 +91,13 @@ tap 'hbang/repo'
 tap 'charizteam/chariz'
 
 ##
+# Preflight
+##
+
+# Homebrew Cask extends Homebrew to install OS X applications and large binaries.
+brew 'cask'
+
+##
 # Browsers
 #
 # We prefer Firefox because it's open source.
@@ -112,31 +119,6 @@ brew 'lynx'
 # Brow.sh text browser
 #tap 'browsh-org/homebrew-browsh'
 #brew 'browsh'
-
-##
-# Passwords
-#
-# We use password-manager applications with many of our projects.
-# If you don't use these, feel free to delete them.
-##
-
-# Pass, a Unix password manager for the command line
-brew 'pass'
-
-# Keybase.io digital signature manager
-cask 'keybase'
-
-# Authy password manager, which is cross-platform
-cask 'authy'
-
-# Bitwarden password manager, which is open-source
-cask 'bitwarden'
-
-# 1password is a password manager
-cask '1password'
-
-# LastPass is a password manager
-cask 'lastpass'
 
 ##
 # Terminals
@@ -184,6 +166,31 @@ brew 'fish'
 
 # Mobile Shell (MOSH) is like SSH plus roaming and smart echo.
 brew 'mobile-shell'
+
+##
+# Passwords
+#
+# We use password-manager applications with many of our projects.
+# If you don't use these, feel free to delete them.
+##
+
+# Pass, a Unix password manager for the command line
+brew 'pass'
+
+# Keybase.io digital signature manager
+cask 'keybase'
+
+# Authy password manager, which is cross-platform
+cask 'authy'
+
+# Bitwarden password manager, which is open-source
+cask 'bitwarden'
+
+# 1password is a password manager
+cask '1password'
+
+# LastPass is a password manager
+cask 'lastpass'
 
 ##
 # Editors
@@ -254,13 +261,10 @@ cask "microsoft-office"
 # These items download files and fetch content from the network.
 ##
 
-# Carthage is a simple, decentralized dependency manager for Cocoa
+# Carthage is a simple, decentralized dependency manager for Cocoa.
 brew 'carthage'
 
-# Homebrew Cask extends Homebrew to install OS X applications and large binaries.
-brew 'cask'
-
-# curl is a command line tool for transferring data with URL syntax
+# curl is a command line tool for transferring data with URL syntax.
 brew 'curl', link: true
 
 # HTTrack is a free and easy-to-use offline browser utility.
@@ -268,9 +272,6 @@ brew 'httrack'
 
 # Wget is a free software package for retrieving files using HTTP and FTP.
 brew 'wget'
-
-# GNU inetutils contains telnet, ftp, etc.
-brew 'inetutils'
 
 ##
 # Version control
@@ -411,10 +412,10 @@ brew 'pcre++'
 brew 'fd'
 
 ##
-# File compression/uncompression
-#
-# We prefer `zstd` because it is the best modern compression.
+# File handling
 ##
+
+## Compression & decompression
 
 # Zstandard is the best modern compression
 brew 'zstd'
@@ -428,9 +429,19 @@ brew 'unzip'
 # bzip
 brew 'bzip2', link: true
 
+# ZIP file compression
+brew 'libzip'
+
 # pp7zip
 brew 'p7zip'
 
+## Encryption & decryption
+
+# bcrypt is high quality encryption that is very popular
+brew 'bcrypt'
+
+# scrypt is high quality encryption
+brew 'scrypt'
 
 ##
 # File synchronization
@@ -564,37 +575,30 @@ brew 'jasper'
 # Image optimizer
 cask 'imageoptim'
 
-##################### TODO ####################################
+## Media-Related
 
 # TODO
-brew 'html-xml-utils'
-
-# Mutt is a small powerful text-based mail client.
-brew 'mutt'
-
-# Netcat is a networking utility for the TCP/IP protocol.
-brew 'netcat'
-
-# prettyping: ping with colorful output and progress bars
-brew 'prettyping'
+brew 'exif'
 
 # TODO
-brew 'ncdu'
+brew 'exiftags'
 
 # TODO
-brew 'randomize-lines'
+brew 'exiftool'
 
 # TODO
-brew 'rename'
+brew 'flac'
+
+# FF MPEG for video
+brew 'ffmpeg'
+brew 'ffmpeg2theora'
+brew 'ffmpegthumbnailer'
 
 # TODO
-brew 'salt'
+brew 'imagemagick'
 
-# Tree is a directory lister that shows a tree outline
-brew 'tree'
-
-# xclip is a command line interface to the X11 clipboard.
-brew 'xclip'
+# TODO
+brew 'theora'
 
 ##
 # Server-Related
@@ -625,18 +629,6 @@ brew 'nginx'
 # Varnish reverse-proxy web application accelerator.
 brew 'varnish'
 
-## Media-Related
-
-brew 'exif'
-brew 'exiftags'
-brew 'exiftool'
-brew 'flac'
-brew 'ffmpeg'
-brew 'ffmpeg2theora'
-brew 'ffmpegthumbnailer'
-brew 'imagemagick'
-brew 'theora'
-
 ##
 # Font-Related
 ##
@@ -650,79 +642,6 @@ brew 'freetype'
 # Command-line programs for manipulating fonts
 brew 'lcdf-typetools'
 
-##
-# Image-Related
-##
-
-## Uncategorized
-
-brew 'abook'
-brew 'ack'
-brew 'apachetop'
-brew 'ascii'
-brew 'asciidoc'
-brew 'asciitex'
-brew 'autobench'
-brew 'autoconf'
-brew 'autoenv'
-brew 'autogen'
-brew 'autojump'
-brew 'base64'
-brew 'bcrypt'
-brew 'bind'
-brew 'bison'
-brew 'bogofilter'
-brew 'colordiff'
-brew 'ctags'
-brew 'docbook'
-brew 'dovecot'
-brew 'doxygen'
-brew 'dpkg'
-brew 'fakeroot'
-brew 'findutils'
-brew 'geoip'
-brew 'gnu-barcode'
-brew 'gnu-getopt'
-brew 'gnu-indent'
-brew 'gnu-prolog'
-brew 'gnu-sed --default-names'
-brew 'gnu-smalltalk'
-brew 'gnu-tar'
-brew 'gnu-time'
-brew 'gnu-typist'
-brew 'gnu-units'
-brew 'gnu-which'
-brew 'google-app-engine'
-brew 'google-js-test'
-brew 'google-perftools'
-brew 'google-sparsehash'
-brew 'google-sql-tool'
-brew 'html2text'
-brew 'htop'
-brew 'httperf'
-brew 'ical-buddy'
-brew 'jmeter'
-brew 'jpeg'
-brew 'libdnet'
-brew 'lzo'
-brew 'rarian'
-brew 'pixman'
-
-# libMemcached is a client library and tools for the memcached server.
-brew 'libmemcached'
-brew 'memcached'
-
-brew 'scrypt'
-
-# Tarsnap is a secure online backup service for Unix.
-brew 'tarsnap'
-
-# Valkyrie is a Qt4-based GUI for the Memcheck and Helgrind tools in Valgrind.
-# Commented-out because it's currently incompatible with macOS 10.12.
-#brew 'valkyrie'
-
-# Xapian is an open-source search engine library.
-brew 'xapian'
 
 ##
 # Dupes
@@ -850,9 +769,6 @@ cask 'codekit'
 
 # TDB
 cask 'commandq'
-
-# TDB
-cask 'dash'
 
 # TDB. TODO investige why this hangs
 #cask 'doxygen'
@@ -1055,45 +971,31 @@ cask 'unison'
 ##
 
 # brew 'aws-cfn-tools'
-# brew 'aws-cloudsearch'
 # brew 'aws-elasticache'
-# brew 'aws-iam-tools'
 # brew 'aws-sns-cli'
-# brew 'dart'
 # brew 'json-c'
 # brew 'json-glib'
 # brew 'json_spirit'
 # brew 'jsonpp'
-# brew 'jstalk'
 # brew 'jsvc'
-# brew 'judy'
-# brew 'justniffer'
-# brew 'jython'
 # brew 'kawa'
 # brew 'kbtin'
 # brew 'kdiff3'
 # brew 'kelbt'
 # brew 'kes'
 # brew 'keychain'
-# brew 'kismet'
 # brew 'kite'
-# brew 'kiwi'
-# brew 'knife-completion'
 # brew 'knock'
 # brew 'konoha'
 # brew 'ktoblzcheck'
-# brew 'kumofs'
 # brew 'kyoto-cabinet'
 # brew 'kyoto-tycoon'
 # brew 'kytea'
 # brew 'lablgtk'
 # brew 'lame'
-# brew 'languagetool'
 # brew 'lapack'
 # brew 'lasi'
-# brew 'lastfm_fplib'
 # brew 'lastfmfpclient'
-# brew 'lastfmlib'
 # brew 'latex2html'
 # brew 'latex2rtf'
 # brew 'launch'
@@ -1330,8 +1232,6 @@ cask 'unison'
 # brew 'lrzsz'
 # brew 'lsdvd'
 # brew 'lsof'
-# brew 'lua'
-# brew 'luajit'
 # brew 'luarocks'
 # brew 'luciddb'
 # brew 'lv'
@@ -1381,7 +1281,6 @@ cask 'unison'
 # brew 'media-info'
 # brew 'mediatomb'
 # brew 'memcache-top'
-# brew 'memcached'
 # brew 'memcacheq'
 # brew 'memtester'
 # brew 'mercurial'
@@ -1821,7 +1720,6 @@ cask 'unison'
 # brew 'rtpbreak'
 # brew 'rubber'
 # brew 'rubinius'
-# brew 'ruby'
 # brew 'ruby-build'
 # brew 'ruby-enterprise-edition'
 # brew 'ruby-odbc'
@@ -2045,7 +1943,6 @@ cask 'unison'
 # brew 'tinysvm'
 # brew 'titlecase'
 # brew 'tivodecode'
-# brew 'tk'
 # brew 'tkdiff'
 # brew 'tmap'
 # brew 'tmpreaper'
@@ -2174,7 +2071,6 @@ cask 'unison'
 # brew 'whohas'
 # brew 'wiggle'
 # brew 'willgit'
-# brew 'wine'
 # brew 'winetricks'
 # brew 'winexe'
 # brew 'wkhtmltopdf'
@@ -2377,6 +2273,9 @@ cask 'bats'
 # Clients
 ##
 
+# GNU inetutils contains telnet, ftp, etc.
+brew 'inetutils'
+
 # Shuttle: simple SSH shortcut menu
 cask 'shuttle'
 
@@ -2406,18 +2305,18 @@ brew 'apache-spark'
 # Mac programming
 ##
 
-# Dash documentation browser and code snippet manager
-cask 'dash'
-
-# Realm browser for the Realm embedded database
-cask 'realm-browser'
-
 # Tunnelblick remote access VPN
 cask 'tunnelblick'
 
 ##
 # Networking
 ##
+
+# Netcat is a networking utility for the TCP/IP protocol.
+brew 'netcat'
+
+# prettyping: ping with colorful output and progress bars
+brew 'prettyping'
 
 # Wireshark network monitoring, with the QT GUI.
 brew 'cmake', link: true
@@ -2432,6 +2331,12 @@ cask 'charles'
 # Siege is an http load testing and benchmarking utility.
 brew 'siege'
 
+# nmap network mapper is a security scanner
+cask 'nmap'
+
+# Certbot: automatically enable HTTPS on your website via Let's Encrypt
+brew 'certbot'
+
 ##
 # IDE
 ##
@@ -2440,18 +2345,15 @@ brew 'siege'
 cask 'eclipse-ide'
 cask 'eclipse-platform'
 
+# Netbeans Java IDE
+#cask 'netbeans'
+
 ##
 # Databases
 #
 # This section installs many databases and database tooling:
 # Cassandra, CouchDB, Hadoop, MariaDB, MongoDB, PostgreSQL,
 # RabbitMQ, Redis, Riak, Sphinx, SQLite. Notably *not* MySQL.
-##
-
-##
-# Databases
-#
-# We like PostgreSQL and a bunch of others.
 ##
 
 # Cassandra database.
@@ -2465,6 +2367,10 @@ brew 'hadoop'
 
 # MariaDB database; prefer this over MySQL.
 brew 'mariadb'
+
+# Memcached data cachce server..
+brew 'libmemcached'
+brew 'memcached'
 
 # MongoDB database.
 brew 'mongodb', restart_service: true
@@ -2510,6 +2416,9 @@ brew 'mysql'
 brew 'postgresql'
 brew 'sphinx'
 
+# Xapian is an open-source search engine library.
+brew 'xapian'
+
 ##
 # Database managers
 #
@@ -2528,6 +2437,9 @@ cask 'sequel-pro'
 
 # Toad database manager by Dell.
 cask 'toad'
+
+# Realm browser for the Realm embedded database
+cask 'realm-browser'
 
 # Valentina Studio database manager.
 cask 'valentina-studio'
@@ -2657,6 +2569,14 @@ brew 'jo'
 tap 'simeji/jid'
 brew 'jid'
 
+# Lua
+
+# Lua scripting language
+brew 'lua'
+
+# Lua just-in-time compiler
+brew 'luajit'
+
 ## Perl
 
 # Perl programming language, esp. for systems administration.
@@ -2674,11 +2594,13 @@ brew 'cpansearch'
 brew 'python'
 brew 'python3'
 
+# Python on the JVM
+brew 'jython'
+
 ## R
 
 # R programming language, esp. for statistics. TODO: which R do we want?
 brew 'r'
-cask 'r'
 
 ## Ruby
 
@@ -2730,6 +2652,10 @@ brew 'taylor'
 # Testflight Apple iOS testing service
 cask 'testflight'
 
+## Tk cross-platform toolkit
+
+brew 'tk'
+
 ##
 # Programming processes
 ##
@@ -2746,6 +2672,14 @@ brew 'llvm', args: ['with-toolchain']
 
 # Jenkins open source automation server for continuous integration
 brew 'jenkins'
+
+## Documentation
+
+# Dash documentation browser and code snippet manager
+cask 'dash'
+
+# Doxygen parses source code documenation annotations
+brew 'doxygen'
 
 ## Serializers
 
@@ -2948,9 +2882,6 @@ brew 'libv8'
 # YAML markup language
 brew 'libyaml'
 
-# ZIP file compression
-brew 'libzip'
-
 # YAML lint validator
 brew 'yamllint'
 
@@ -2960,25 +2891,185 @@ brew 'libpng'
 brew 'libtiff'
 brew 'libwebp'
 
+##################### TODO ####################################
 
-## Networking
+# TODO
+brew 'html-xml-utils'
 
-# nmap network mapper is a security scanner
-cask 'nmap'
+# Mutt is a small powerful text-based mail client.
+brew 'mutt'
 
-# Wireshark network protocol analyzer
-cask 'wireshark'
+# TODO
+brew 'ncdu'
 
-# Certbot: automatically enable HTTPS on your website via Let's Encrypt
-brew 'certbot'
+# TODO
+brew 'randomize-lines'
 
-## Programming
+# TODO
+brew 'rename'
 
-# Netbeans Java IDE
-cask 'netbeans'
+# TODO
+brew 'salt'
 
-# R statistics programming language
-cask 'r'
+# Tree is a directory lister that shows a tree outline
+brew 'tree'
+
+# xclip is a command line interface to the X11 clipboard.
+brew 'xclip'
+
+# TODO
+brew 'abook'
+
+# TODO
+brew 'ack'
+
+# TODO
+brew 'apachetop'
+
+# TODO
+brew 'ascii'
+
+# TODO
+brew 'asciidoc'
+
+# TODO
+brew 'asciitex'
+
+# TODO
+brew 'autobench'
+
+# TODO
+brew 'autoconf'
+
+# TODO
+brew 'autoenv'
+
+# TODO
+brew 'autogen'
+
+# TODO
+brew 'autojump'
+
+# TODO
+brew 'base64'
+
+# TODO
+brew 'bind'
+
+# TODO
+brew 'bison'
+
+# TODO
+brew 'bogofilter'
+
+# TODO
+brew 'colordiff'
+
+# TODO
+brew 'ctags'
+
+# TODO
+brew 'docbook'
+
+# TODO
+brew 'dovecot'
+
+# TODO
+brew 'dpkg'
+
+# TODO
+brew 'fakeroot'
+
+# TODO
+brew 'findutils'
+
+# TODO
+brew 'geoip'
+
+# TODO
+brew 'gnu-barcode'
+
+# TODO
+brew 'gnu-getopt'
+
+# TODO
+brew 'gnu-indent'
+
+# TODO
+brew 'gnu-prolog'
+
+# TODO
+brew 'gnu-sed --default-names'
+
+# TODO
+brew 'gnu-smalltalk'
+
+# TODO
+brew 'gnu-tar'
+
+# TODO
+brew 'gnu-time'
+
+# TODO
+brew 'gnu-typist'
+
+# TODO
+brew 'gnu-units'
+
+# TODO
+brew 'gnu-which'
+
+# TODO
+brew 'google-app-engine'
+
+# TODO
+brew 'google-js-test'
+
+# TODO
+brew 'google-perftools'
+
+# TODO
+brew 'google-sparsehash'
+
+# TODO
+brew 'google-sql-tool'
+
+# TODO
+brew 'html2text'
+
+# TODO
+brew 'htop'
+
+# TODO
+brew 'httperf'
+
+# TODO
+brew 'ical-buddy'
+
+# TODO
+brew 'jmeter'
+
+# TODO
+brew 'jpeg'
+
+# TODO
+brew 'libdnet'
+
+# TODO
+brew 'lzo'
+
+# TODO
+brew 'rarian'
+
+# TODO
+brew 'pixman'
+
+# Tarsnap is a secure online backup service for Unix.
+brew 'tarsnap'
+
+# Valkyrie is a Qt4-based GUI for the Memcheck and Helgrind tools in Valgrind.
+# Commented-out because it's currently incompatible with macOS 10.12.
+#brew 'valkyrie'
 
 ##
 # Fonts
