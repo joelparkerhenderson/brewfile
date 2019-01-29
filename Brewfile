@@ -59,7 +59,7 @@
 # ## Tracking
 #
 # * Package: https://github.com/joelparkerhenderson/brewfile
-# * Version: 2.3.0
+# * Version: 3.0.0
 # * Created: 2017-01-01
 # * Updated: 2019-01-28
 # * License: GPL
@@ -67,9 +67,34 @@
 ##
 
 ##
+# Taps
+##
+
+# Basics
+tap 'homebrew/cask'
+tap 'homebrew/core'
+tap 'homebrew/boneyard'
+tap 'homebrew/dev-tools'
+tap 'homebrew/bundle'
+tap 'homebrew/services'
+
+# Cask
+tap 'caskroom/cask'
+tap 'caskroom/drivers'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+
+# Third-party taps
+tap 'denji/nginx'
+tap 'koekeishiya/formulae'
+tap 'hbang/repo'
+tap 'charizteam/chariz'
+
+##
 # Browsers
 #
 # We prefer Firefox because it's open source.
+# Google software including Chrome is in its own section.
 ##
 
 # Firefox web browser
@@ -78,8 +103,11 @@ cask 'firefox'
 # Google Chrome web browser
 cask 'google-chrome'
 
+# Lynx terminal web browser
+brew 'lynx'
+
 # Opera web browser
-cask 'opera'
+#cask 'opera'
 
 # Brow.sh text browser
 #tap 'browsh-org/homebrew-browsh'
@@ -96,10 +124,13 @@ cask 'opera'
 brew 'pass'
 
 # Keybase.io digital signature manager
-brew 'keybase'
+cask 'keybase'
 
 # Authy password manager, which is cross-platform
 cask 'authy'
+
+# Bitwarden password manager, which is open-source
+cask 'bitwarden'
 
 # 1password is a password manager
 cask '1password'
@@ -118,11 +149,7 @@ cask 'lastpass'
 cask 'iterm2'
 
 # Tmux is a newer terminal multiplexer.
-#
-# TODO:
-#
-#     brew 'pkg-config' && brew link pkg-config && brew 'tmux'
-#
+brew 'pkg-config', link: true
 brew 'tmux'
 
 # tmate is a fork of tmux that makes screen sharing friendlier.
@@ -132,7 +159,7 @@ brew 'tmate'
 brew 'homebrew/dupes/screen'
 
 # ngrok opens a secure tunnel to localhost
-brew 'ngrok'
+cask 'ngrok'
 
 ##
 # Shells
@@ -168,7 +195,10 @@ brew 'mobile-shell'
 # bat is like `cat` plus line numbers, syntax highlighting, and more.
 brew 'bat'
 
-# Most is a powerful paging program; compare `less` and `more`.
+# less is like `more` plus has more capability.
+brew 'less'
+
+# most is like `more` plus has more power.
 brew 'most'
 
 # Vim editor
@@ -200,7 +230,7 @@ cask 'atom'
 cask 'sublime-text'
 
 # GNU Aspell is a free open source spell checker; compare `lspell`.
-#brew 'aspell --with-lang=en'
+brew 'aspell', args: ['with-lang=en']
 
 # Enca - detect and convert encoding of text files
 brew 'enca'
@@ -212,8 +242,11 @@ cask 'mactex'
 # Office software
 ##
 
-# LibreOffice is a large editor for text, spreadsheets, diagrams.
+# LibreOffice is a large suite of software for documents, spreadsheets, diagrams.
 cask 'libreoffice'
+
+# Microsof Office is a large suite of software for documents, spreadsheets, diagrams.
+cask "microsoft-office"
 
 ##
 # Downloaders
@@ -228,7 +261,7 @@ brew 'carthage'
 brew 'cask'
 
 # curl is a command line tool for transferring data with URL syntax
-brew 'curl'
+brew 'curl', link: true
 
 # HTTrack is a free and easy-to-use offline browser utility.
 brew 'httrack'
@@ -250,19 +283,13 @@ brew 'inetutils'
 brew 'cvs'
 
 # Git is a free and open source distributed version control system.
-#
-# TODO: why do we need brew 'git' and also cask 'git'?
 brew 'git'
-cask 'git'
 
 # Git Large File Storage
 brew 'git-lfs'
 
 # TODO
 brew 'git-cola'
-
-# Git extras: utilities including summary, repl, population, etc.
-cask 'git-extras'
 
 # Git extensions to provide high-level operations for Git Flow branching model.
 brew 'git-flow'
@@ -342,7 +369,6 @@ brew 'wdiff'
 
 brew 'gdb'  # gdb requires further actions to make it work. See `brew info gdb`.
 brew 'gpatch'
-brew 'less'
 brew 'm4'
 brew 'make'
 brew 'nano'
@@ -366,7 +392,7 @@ brew 'pinentry-mac'
 brew 'openssl'
 
 # pkg-config is a helper tool used when compiling applications and libraries.
-brew 'pkg-config && brew link pkg-config && brew install tmux'
+brew 'pkg-config', link: true
 
 # Functions for use by applications that allow users to edit command lines while typing.
 brew 'readline'
@@ -397,7 +423,14 @@ brew 'zstd'
 brew 'unrar'
 
 # unzip is the classic command.
-brew 'homebrew/dupes/unzip'
+brew 'unzip'
+
+# bzip
+brew 'bzip2', link: true
+
+# pp7zip
+brew 'p7zip'
+
 
 ##
 # File synchronization
@@ -407,7 +440,7 @@ brew 'homebrew/dupes/unzip'
 ##
 
 # rsync is the classic unix file synchronizer.
-brew 'homebrew/dupes/rsync'
+brew 'rsync'
 
 # Unison is a high-level file synchronization utility.
 brew 'unison'
@@ -431,7 +464,7 @@ cask 'box-sync'
 ##
 
 # ripgrep is text search; we prefer it over grep, ag, git grep, ucg, pt, sift.
-brew 'https://raw.githubusercontent.com/BurntSushi/ripgrep/master/pkg/brew/ripgrep.rb'
+brew 'ripgrep'
 
 # grep is the classic searcher
 brew 'grep'
@@ -440,7 +473,7 @@ brew 'grep'
 brew 'ag'
 
 # sift is like grep, plus faster and with more features; retired by ripgrep.
-brew install sift
+brew 'sift'
 
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
@@ -475,23 +508,12 @@ brew 'libgphoto2'
 brew 'libpng'
 brew 'libtiff'
 
+## Multimedia layers
+
 # VLC media player
 cask 'vlc'
 
-# GraphicsMagick is the swiss army knife of image processing.
-brew 'graphicsmagick'
-
-# TODO
-brew 'graphviz'
-
-# Gnuplot is a portable command-line driven graphing utility.
-brew 'gnuplot'
-
-# yEd is desktop application to generate high-quality diagrams.
-cask 'yed'
-
-# Tap GUI
-brew tap homebrew/gui
+## Multimedia editors
 
 # Gimp pixel-based image editor, similar to Adobe Photoshop
 cask 'gimp'
@@ -502,17 +524,16 @@ cask 'inkscape'
 # Blender 3D modeller
 cask 'blender'
 
-# Jasper command line transcoder between JPEG2000 and other formats.
-brew 'jasper'
-
 # Shotcut movie editor
 cask 'shotcut'
 
-# Image optimizer
-cask 'imageoptim'
-
 # Freemind mind map editor
 cask 'freemind'
+
+# yEd is desktop application to generate high-quality diagrams.
+cask 'yed'
+
+## ebooks
 
 # Calibre ebook reader and manager
 cask 'calibre'
@@ -520,44 +541,33 @@ cask 'calibre'
 # Kindle book reader by Amazon
 cask 'kindle'
 
-##
-# Google software
-#
-# We use Chrome, Drive, Earth, Music, etc.
-##
+# Adobe Air player for multimedia content
+cask 'adobe-air'
 
-# Google Chrome web browser
-cask 'google-chrome'
+## Misc
 
-# Google Drive cloud file storage
-cask 'google-drive'
+# GraphicsMagick is the swiss army knife of image processing.
+brew 'graphicsmagick'
 
-# Google Earth viewer for satellite imagery and maps.
-cask 'google-earth'
+# TODO
+brew 'graphviz'
 
-# Google Music plays songs, especially with a subscription service.
-cask 'google-music'
+# Gnuplot is a portable command-line driven graphing utility.
+brew 'gnuplot'
 
-# TDB
-cask 'google-notifier'
+# Tap GUI
+tap 'homebrew/gui'
 
-# TDB
-cask 'google-quick-search-box'
+# Jasper command line transcoder between JPEG2000 and other formats.
+brew 'jasper'
 
-# TDB
-cask 'google-refine'
-
-# TDB
-cask 'google-web-designer'
-
+# Image optimizer
+cask 'imageoptim'
 
 ##################### TODO ####################################
 
 # TODO
 brew 'html-xml-utils'
-
-# TODO
-brew 'lynx'
 
 # Mutt is a small powerful text-based mail client.
 brew 'mutt'
@@ -625,7 +635,6 @@ brew 'ffmpeg'
 brew 'ffmpeg2theora'
 brew 'ffmpegthumbnailer'
 brew 'imagemagick'
-brew 'kindle'
 brew 'theora'
 
 ##
@@ -650,7 +659,6 @@ brew 'lcdf-typetools'
 brew 'abook'
 brew 'ack'
 brew 'apachetop'
-brew 'apple-gcc42'
 brew 'ascii'
 brew 'asciidoc'
 brew 'asciitex'
@@ -695,7 +703,7 @@ brew 'httperf'
 brew 'ical-buddy'
 brew 'jmeter'
 brew 'jpeg'
-brew isntall libdnet
+brew 'libdnet'
 brew 'lzo'
 brew 'rarian'
 brew 'pixman'
@@ -736,39 +744,36 @@ brew 'xapian'
 #
 ##
 
-brew 'homebrew/dupes/awk'
-brew 'homebrew/dupes/diffstat'
-brew 'homebrew/dupes/diffutils'
-brew 'homebrew/dupes/ed'
-brew 'homebrew/dupes/expect'
-brew 'homebrew/dupes/fetchmail'
-brew 'homebrew/dupes/file-formula'
-brew 'homebrew/dupes/gdb'
-brew 'homebrew/dupes/gpatch'
-brew 'homebrew/dupes/gperf'
-brew 'homebrew/dupes/grep'
-brew 'homebrew/dupes/groff'
+brew 'awk'
+brew 'diffstat'
+brew 'diffutils'
+brew 'ed'
+brew 'expect'
+brew 'fetchmail'
+brew 'file-formula'
+brew 'gdb'
+brew 'gpatch'
+brew 'gperf'
+brew 'groff'
 brew 'homebrew/dupes/gzip'
 brew 'homebrew/dupes/heimdal'
-brew 'homebrew/dupes/lapack'
-brew 'homebrew/dupes/less'
+brew 'lapack'
 brew 'homebrew/dupes/libedit'
-brew 'homebrew/dupes/libiconv'
+brew 'libiconv'
 brew 'homebrew/dupes/libpcap'
-brew 'homebrew/dupes/lsof'
-brew 'homebrew/dupes/m4'
-brew 'homebrew/dupes/make'
-brew 'homebrew/dupes/nano'
-brew 'homebrew/dupes/ncurses'
-brew 'homebrew/dupes/openldap'
-brew 'homebrew/dupes/openssh'
-brew 'homebrew/dupes/screen'
-brew 'homebrew/dupes/tcl-tk'
-brew 'homebrew/dupes/tcpdump'
-brew 'homebrew/dupes/tidy'
-brew 'homebrew/dupes/units'
-brew 'homebrew/dupes/whois'
-brew 'homebrew/dupes/zlib'
+brew 'lsof'
+brew 'm4'
+brew 'make'
+brew 'nano'
+brew 'ncurses'
+brew 'openldap'
+brew 'openssh'
+brew 'screen'
+brew 'tcl-tk'
+brew 'tcpdump'
+brew 'gnu-units'
+brew 'whois'
+brew 'zlib'
 
 ##
 # Brew cask enables installing typical Mac OS X applications.
@@ -787,9 +792,6 @@ cask 'adventure'
 cask 'alfred'
 
 # TDB
-cask 'amazon-cloud-drive'
-
-# TDB
 cask 'amazon-music'
 
 # TDB
@@ -806,9 +808,6 @@ cask 'arq'
 
 # TDB
 cask 'atext'
-
-# TDB
-cask 'audacity'
 
 # TDB
 cask 'backblaze-downloader'
@@ -832,9 +831,6 @@ cask 'beacon-scanner'
 cask 'brain-workshop'
 
 # TDB
-cask 'cactus'
-
-# TDB
 cask 'caffeine'
 
 # TDB
@@ -845,9 +841,6 @@ cask 'ccleaner'
 
 # TDB
 cask 'cheatsheet'
-
-# TDB
-cask 'chromecast'
 
 # TDB
 cask 'coconutbattery'
@@ -861,26 +854,20 @@ cask 'commandq'
 # TDB
 cask 'dash'
 
-# TDB
-cask 'doxygen'
-
+# TDB. TODO investige why this hangs
+#cask 'doxygen'
+      
 # TDB
 cask 'duet'
 
 # TDB
-cask 'easysimbl'
-
-# TDB
 cask 'evernote'
 
-# Flash multimedia player
-cask 'flash'
+# TDB
+cask 'flash-player''
 
 # TDB
 cask 'fluid'
-
-# Flux dims the screen colors for better nighttime visibility.
-cask 'flux'
 
 # TDB
 cask 'freeplane'
@@ -896,9 +883,6 @@ cask 'github'
 
 # TDB
 cask 'gitx'
-
-# TDB
-cask 'grooveshark'
 
 # TDB
 cask 'harvest'
@@ -928,25 +912,13 @@ cask 'little-snitch'
 cask 'mysqlworkbench'
 
 # TODO
-cask 'p4merge'
-
-# Pandora music player
-cask 'pandora-one'
-
-# TODO
 cask 'paparazzi'
-
-# Prezi slide show presentation.
-cask 'prezi'
 
 # TODO
 cask 'pupil'
 
 # TODO
 cask 'quicksilver'
-
-# Rdio music player.
-cask 'rdio'
 
 # TODO
 cask 'rescuetime'
@@ -978,12 +950,6 @@ cask 'slack'
 # TODO
 cask 'sleep-monitor'
 
-# Sophos anti virus
-cask 'sophos-anti-virus-home-edition'
-
-# TODO
-cask 'sourcetree'
-
 # Spotify music player
 cask 'spotify'
 
@@ -998,9 +964,6 @@ cask 'thisservice'
 
 # TODO
 cask 'transmit'
-
-# TODO
-cask 'todoist'
 
 # TODO
 cask 'todos'
@@ -1148,7 +1111,6 @@ cask 'unison'
 # brew 'legit'
 # brew 'lemon'
 # brew 'leptonica'
-# brew 'less'
 # brew 'lesspipe'
 # brew 'lesstif'
 # brew 'leveldb'
@@ -1624,7 +1586,6 @@ cask 'unison'
 # brew 'owfs'
 # brew 'p0f'
 # brew 'p11-kit'
-# brew 'p7zip'
 # brew 'pam_yubico'
 # brew 'paml'
 # brew 'pango'
@@ -2071,8 +2032,6 @@ cask 'unison'
 # brew 'theora'
 # brew 'thrift'
 # brew 'thrulay'
-# brew 'tidy'
-# brew 'tidyp'
 # brew 'tiff2png'
 # brew 'tig'
 # brew 'tiger-vnc'
@@ -2090,7 +2049,6 @@ cask 'unison'
 # brew 'tkdiff'
 # brew 'tmap'
 # brew 'tmpreaper'
-# brew 'tmux'
 # brew 'tn5250'
 # brew 'tnef'
 # brew 'todo-txt'
@@ -2305,32 +2263,23 @@ cask 'unison'
 # brew 'zzuf'
 
 ##
-# brew-install-our-base-packages-manually.sh
-#
-# Use Homebrew to install our favorite typical-user packages
-# that may need to be installed manually because of passwords,
-# or moving files, or more-complex issues that need a human.
+# Environment-related
 ##
 
-## Environment-related
-
 # DisplayLink enables adding monitors
-cask 'displaylink'
-
-# Java language for running many applications
-cask 'java'
+#cask 'displaylink'
 
 # Karabiner remaps keyboard keys
 cask 'karabiner'
 
-## Media-related
+# OSX FUSE file system
+cask 'osxfuse'
 
-# Adobe Air player for multimedia content
-cask 'adobe-air'
+# Alfred: boost your efficiency with hotkeys, keywords, text expansion, etc.
+brew 'alfred'
 
-# Adobe Reader for PDF files
-cask 'adobe-reader'
-
+# Flux dims the screen colors for better nighttime visibility.
+cask 'flux'
 
 ## Misc
 
@@ -2338,27 +2287,40 @@ cask 'flip4mac'
 cask 'google-hangouts'
 cask 'inky'
 cask 'obs'
-cask 'pandoc'
 cask 'prey'
 cask 'seil'
 cask 'teamviewer'
 cask 'unity-web-player'
-cask 'unity3d'
 cask 'zoomus'
-
 
 ##
 # Mac App Store
 #
 # We use the Mac App Store only when an app is not available
-# in a comparable way via brew cask.
+# in a comparable way via brew install and/or brew cask.
 ##
 
+# Apple apps
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Slack', id: 803453959
-mas 'Sip', id: 507257563
+
+# Our favorites
+mas "Apple Configurator 2", id: 1037126344
+mas "Blackmagic Disk Speed Test", id: 425264550
+mas "Brightness Slider", id: 456624497
+mas "Color Picker", id: 641027709
+mas "Deliveries", id: 924726344
+mas "Expressions", id: 913158085
+mas "InspectPNG", id: 498851708
+mas "PCalc", id: 403504866
+mas "Pixelmator", id: 407963104
+mas "Telegram", id: 747648890
+mas "Textual", id: 896450579
+mas "Trello", id: 1278508951
+mas "Tweetbot", id: 557168941
 mas 'Simplenote', id: 692867256
+mas 'Sip', id: 507257563
+mas 'Slack', id: 803453959
 mas 'Todoist', id: 585829637
 
 ##
@@ -2385,18 +2347,12 @@ mas 'Todoist', id: 585829637
 ##
 
 ##
-# System
-##
-
-# XQuartz provides X.Org X Window System that runs on OS X.
-cask 'xquartz'
-
-##
 # Environment
 ##
 
 # Code Climate Platform for all static analysic
-brew tap codeclimate/formulas && brew 'codeclimate'
+tap 'codeclimate/formulas'
+brew 'codeclimate'
 
 # Command-line programs for manipulating fonts
 brew 'lcdf-typetools'
@@ -2408,8 +2364,11 @@ brew 'lcdf-typetools'
 # GUI for rsync
 brew 'grsync'
 
+# Pandoc document convert
+brew 'pandoc', link: true
+
 # Shell script syntax check linter
-brew link pandoc; brew 'shellcheck'
+brew 'shellcheck'
 
 # BATS: Bash Automated Testing System
 cask 'bats'
@@ -2443,7 +2402,6 @@ brew 'maven'
 # Apache Spark is for analyitcs
 brew 'apache-spark'
 
-
 ##
 # Mac programming
 ##
@@ -2463,7 +2421,7 @@ cask 'tunnelblick'
 
 # Wireshark network monitoring, with the QT GUI.
 brew 'cmake', link: true
-cask 'wireshark --with-qt'
+cask 'wireshark', args: ['with-qt']
 
 # Wireshark-chmodbft enables regular users to capture network packets.
 cask 'wireshark-chmodbpf'
@@ -2509,7 +2467,7 @@ brew 'hadoop'
 brew 'mariadb'
 
 # MongoDB database.
-brew 'mongodb'
+brew 'mongodb', restart_service: true
 
 # PostgreSQL database.
 brew 'postgres'
@@ -2531,7 +2489,7 @@ brew 'prisma'
 brew 'rabbitmq'
 
 # Redis database, esp. for key-value cache and store, and data structures.
-brew 'redis'
+brew 'redis', restart_service: true
 
 # Riak open-source distributed database.
 brew 'riak'
@@ -2696,7 +2654,8 @@ brew 'v8'
 brew 'jo'
 
 # JID JSON explorer
-brew tap simeji/jid && brew 'jid'
+tap 'simeji/jid'
+brew 'jid'
 
 ## Perl
 
@@ -2775,10 +2734,27 @@ cask 'testflight'
 # Programming processes
 ##
 
+## Compilers
+
+# GCC GNU Compiler Collection
+brew 'gcc'
+
+# LLVM compiler
+brew 'llvm', args: ['with-toolchain']
+
 ## Continuous automation
 
 # Jenkins open source automation server for continuous integration
 brew 'jenkins'
+
+## Serializers
+
+# Protocol buffers for serializing structured data; compare thrift.
+brew 'protobuf'
+brew 'protobuf-c'
+
+# Thrift network serialization protocol; compare protobuf.
+brew 'thrift'
 
 ## Testing
 
@@ -2799,10 +2775,10 @@ brew 'geckodriver'
 brew 'azure-cli'
 
 # Amazon Web Services (AWS) Command Line Interface (CLI)
-brew install awscli
+brew 'awscli'
 
 # AWS command line tools
-brew tap wallix/awless
+tap 'wallix/awless'
 brew 'awless'
 
 # Heroku app hosting
@@ -2818,6 +2794,9 @@ cask 'corectl'
 
 # VirtualBox creates and configures portable development environments, by Oracle.
 cask 'virtualbox'
+
+# VMWare Fusion virutal machines
+cask 'vmware-fusion'
 
 # Vagrant lightweight, reproducible, portable development environments
 cask 'vagrant'
@@ -4059,20 +4038,3 @@ cask 'caskroom/fonts/font-yellowtail'
 cask 'caskroom/fonts/font-yeseva-one'
 cask 'caskroom/fonts/font-yesteryear'
 cask 'caskroom/fonts/font-zeyada'
-
-########################### TODO ############################################
-
-## Utility-Related
-
-# Alfred: boost your efficiency with hotkeys, keywords, text expansion, etc.
-brew 'alfred'
-
-## Serializers
-
-# Protocol buffers for serializing structured data; compare thrift.
-brew 'protobuf'
-brew 'protobuf-c'
-
-# Thrift network serialization protocol; compare protobuf.
-brew 'thrift'
-
