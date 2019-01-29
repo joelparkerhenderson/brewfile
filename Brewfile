@@ -98,7 +98,7 @@ cask 'google-chrome'
 brew 'lynx'
 
 # Opera web browser
-#cask 'opera'
+cask 'opera'
 
 # Brow.sh text browser
 #tap 'browsh-org/homebrew-browsh'
