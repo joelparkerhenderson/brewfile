@@ -16,6 +16,23 @@
 # There are many TODO items in this file. If you want, help us
 # describe these and organize them into the relevant sections.
 #
+# The file is generally organized in these sections:
+#
+#   * Software that's fine for everyone,
+#     e.g., browsers, players, editors.
+#
+#   * Software that's especially suitable for programmers,
+#     e.g., compilers, databases, languages, servers, etc.
+#
+#   * Paid software that requires a license or purchase,
+#     e.g. JetBrains, OmniGroup, Paw, etc.
+#
+#   * Libraries: operating system libraries e.g. lib*.
+#
+#   * TODO: a section of uncategorized software.
+#
+#   * Fonts
+#
 #
 # ### About Brewfile capabilities
 #
@@ -101,6 +118,12 @@ tap 'caskroom/versions'
 
 # Homebrew Cask extends Homebrew to install OS X applications and large binaries.
 brew 'cask'
+
+###########################################################################
+#
+# SOFTWARE THAT IS TYPICALLY FINE FOR EVERYONE
+#
+###########################################################################
 
 ##
 # Browsers
@@ -647,7 +670,6 @@ brew 'freetype'
 # Command-line programs for manipulating fonts
 brew 'lcdf-typetools'
 
-
 ##
 # Dupes
 #
@@ -775,9 +797,6 @@ cask 'codekit'
 # TDB
 cask 'commandq'
 
-# TDB. TODO investige why this hangs
-#cask 'doxygen'
-      
 # TDB
 cask 'duet'
 
@@ -1072,7 +1091,47 @@ cask 'nmap'
 brew 'certbot'
 
 ##
-# IDE
+# Markup languages
+#
+# For example this section is a good place for HTML tools,
+# Markdown tools, UML tools, XML tools, and similar.
+##
+
+# Pandoc converts among various formats, such as Markdown and HTML
+brew 'pandoc'
+
+## Markdown
+
+# MacDown simple markdown editor
+cask 'macdown'
+
+## UML
+
+# StarUML modeling tool
+cask 'staruml'
+
+# PlantUML markup text to diagram
+brew 'plantuml'
+
+## XML
+
+# XML converter
+brew 'xmlstarlet'
+
+# Libxml2 is the XML C parser and toolkit.
+brew 'libxml2'
+
+# Libxslt is the XSLT C library for the XML EXtensible Stylesheet Language.
+brew 'libxslt'
+
+###########################################################################
+#
+# SOFTWARE THAT IS ESPECIALLY SUITABLE FOR DEVELOPERS
+#
+###########################################################################
+
+##
+# IDEs: Integrated Development Environments
 ##
 
 # Eclipse is a large programming IDE built on Java
@@ -1192,40 +1251,6 @@ brew 'logstash'
 brew 'kibana'
 
 ##
-# Markup languages
-#
-# For example this section is a good place for HTML tools,
-# Markdown tools, UML tools, XML tools, and similar.
-##
-
-# Pandoc converts among various formats, such as Markdown and HTML
-brew 'pandoc'
-
-## Markdown
-
-# MacDown simple markdown editor
-cask 'macdown'
-
-## UML
-
-# StarUML modeling tool
-cask 'staruml'
-
-# PlantUML markup text to diagram
-brew 'plantuml'
-
-## XML
-
-# XML converter
-brew 'xmlstarlet'
-
-# Libxml2 is the XML C parser and toolkit.
-brew 'libxml2'
-
-# Libxslt is the XSLT C library for the XML EXtensible Stylesheet Language.
-brew 'libxslt'
-
-##
 # Programming languages
 #
 # This section installs many programming languages:
@@ -1303,7 +1328,7 @@ brew 'jo'
 tap 'simeji/jid'
 brew 'jid'
 
-# Lua
+## Lua
 
 # Lua scripting language
 brew 'lua'
@@ -1490,23 +1515,22 @@ cask 'docker'
 # Kubernetes Solo cluster for macOS
 cask 'kube-solo'
 
+###########################################################################
+#
+# PAID SOFTWARE
+#
+###########################################################################
+
 ##
-# Paid software
+# This section installs software that costs money.
+# In general, we aim to install free trial versions.
 #
-#   * JetBrains programmer tools
-#   * OmniGroup project management tools
-#
-# This section installs the tools, which are free trial versions.
-# We pay for licenses for all these for all our teammates.
+# We pay for licenses for this software for our teammates
+# when we work on projects that use this software.
 #
 # You may want to customize this section by deleting any items that
 # you don't want to use or purchase, because this will save disk space.
 ##
-
-## Paw.cloud
-
-# Paw HTTP API testing tool
-cask 'paw'
 
 ##
 # JetBrains
@@ -1557,6 +1581,17 @@ cask 'omniplan'
 
 # Outliner
 cask 'omnioutliner'
+
+## Paw.cloud
+
+# Paw HTTP API testing tool
+cask 'paw'
+
+###########################################################################
+#
+# LIBRARIES
+#
+###########################################################################
 
 ##
 # Libraries
@@ -1625,7 +1660,11 @@ brew 'libpng'
 brew 'libtiff'
 brew 'libwebp'
 
-##################### TODO ####################################
+###########################################################################
+#
+# TODO
+#
+###########################################################################
 
 # TODO
 brew 'html-xml-utils'
@@ -1804,6 +1843,12 @@ brew 'tarsnap'
 # Valkyrie is a Qt4-based GUI for the Memcheck and Helgrind tools in Valgrind.
 # Commented-out because it's currently incompatible with macOS 10.12.
 #brew 'valkyrie'
+
+###########################################################################
+#
+# FONTS
+#
+###########################################################################
 
 ##
 # Fonts
