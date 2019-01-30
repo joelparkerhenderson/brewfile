@@ -804,7 +804,7 @@ cask 'duet'
 cask 'evernote'
 
 # TDB
-cask 'flash-player''
+cask 'flash-player'
 
 # TDB
 cask 'fluid'
