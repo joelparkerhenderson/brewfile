@@ -1073,7 +1073,7 @@ brew 'prettyping'
 
 # Wireshark network monitoring, with the QT GUI.
 brew 'cmake', link: true
-cask 'wireshark', args: ['with-qt']
+cask 'wireshark'  #TODO add this: args: ['with-qt']
 
 # Wireshark-chmodbft enables regular users to capture network packets.
 cask 'wireshark-chmodbpf'
