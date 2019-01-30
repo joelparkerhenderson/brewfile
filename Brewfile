@@ -166,7 +166,7 @@ brew 'tmux'
 brew 'tmate'
 
 # Screen is an older terminal multiplexer.
-brew 'homebrew/dupes/screen'
+brew 'screen'
 
 # ngrok opens a secure tunnel to localhost
 cask 'ngrok'
