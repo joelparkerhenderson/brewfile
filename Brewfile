@@ -4,6 +4,9 @@
 # We use this Brewfile for our teams and their developer laptops.
 # This is a work in progress. Use at your own discretion.
 #
+#
+# ## Introduction
+#
 # This file installs many apps, including office suites, multimedia suites,
 # programming langauges, unix utilities, sysadmin tools, and fonts.
 #
@@ -13,15 +16,17 @@
 # There are many TODO items in this file. If you want, help us
 # describe these and organize them into the relevant sections.
 #
+#
+# ### About Brewfile capabilities
+#
 # To learn about Brewfile capabilties, please see:
 #
 #   * http://brew.sh/
 #   * http://homebrew-file.readthedocs.io/
 #   * https://github.com/Homebrew/homebrew-bundle
 #
-# Feedback welcome. Pull requests welcome.
 #
-# ## Usage
+# ### Usage
 #
 # To use this Brewfile via `brew bundle`:
 #
@@ -36,7 +41,8 @@
 #     <user>/<repo> for github repository,
 #     or full path for the repository: joelparkerhenderson/brewfile
 #
-# ## Mac tools vs. GNU tools
+#
+# ### Mac tools vs. GNU tools
 #
 # We generaly prefer GNU tools over preinstalled Mac software tools.
 # For example, we prefer the GNU `sed` command vs. macOS `sed` command.
@@ -44,13 +50,28 @@
 # However, we have seen this cause conflicts with macOS software that
 # isn't aware of GNU; therefore we install the dupes in parallel.
 #
-# ## See Also
-#
-# See also:
+# See:
 #
 #   * https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
 #
-# ## Tracking
+#
+# ## Epilog
+#
+#
+# ### Contributing
+#
+# Feedback welcome. Pull requests welcome.
+#
+# For more information, see the file `CONTRIBUTING.md` in the repository.
+#
+#
+# ### Thanks
+#
+# Thanks to the Homebrew team, and all the brew file package teams.
+# Your work makes macOS much better for so many people!
+#
+#
+# ### Tracking
 #
 # * Package: https://github.com/joelparkerhenderson/brewfile
 # * Version: 3.0.0
