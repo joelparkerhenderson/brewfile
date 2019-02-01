@@ -1005,9 +1005,10 @@ cask 'zoomus'
 # Environment
 ##
 
-# Code Climate Platform for all static analysic
-tap 'codeclimate/formulas'
-brew 'codeclimate'
+# Code Climate Platform for all static analytics.
+# Commented-out because it prompts for a password.
+#tap 'codeclimate/formulas'
+#brew 'codeclimate'
 
 # Command-line programs for manipulating fonts
 brew 'lcdf-typetools'
