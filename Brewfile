@@ -463,6 +463,9 @@ brew 'libzip'
 # pp7zip
 brew 'p7zip'
 
+# GNU zip
+brew 'gzip'
+
 ## Encryption & decryption
 
 # bcrypt is high quality encryption that is very popular
@@ -701,12 +704,11 @@ brew 'gdb'
 brew 'gpatch'
 brew 'gperf'
 brew 'groff'
-brew 'homebrew/dupes/gzip'
-brew 'homebrew/dupes/heimdal'
+brew 'heimdal'
 brew 'lapack'
-brew 'homebrew/dupes/libedit'
+brew 'libedit'
 brew 'libiconv'
-brew 'homebrew/dupes/libpcap'
+brew 'libpcap'
 brew 'lsof'
 brew 'm4'
 brew 'make'
@@ -714,7 +716,6 @@ brew 'nano'
 brew 'ncurses'
 brew 'openldap'
 brew 'openssh'
-brew 'screen'
 brew 'tcl-tk'
 brew 'tcpdump'
 brew 'gnu-units'
@@ -924,9 +925,6 @@ cask 'karabiner'
 # OSX FUSE file system
 cask 'osxfuse'
 
-# Alfred: boost your efficiency with hotkeys, keywords, text expansion, etc.
-brew 'alfred'
-
 # Flux dims the screen colors for better nighttime visibility.
 cask 'flux'
 
@@ -936,8 +934,10 @@ cask 'flip4mac'
 cask 'google-hangouts'
 cask 'inky'
 cask 'obs'
-cask 'prey'
-cask 'seil'
+
+# Prey is a service tracks laptops and phones; it needs a password
+#cask 'prey'
+
 cask 'teamviewer'
 cask 'unity-web-player'
 cask 'zoomus'
