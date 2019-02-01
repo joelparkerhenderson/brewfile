@@ -1027,7 +1027,7 @@ brew 'pandoc', link: true
 brew 'shellcheck'
 
 # BATS: Bash Automated Testing System
-cask 'bats'
+brew 'bats'
 
 ##
 # Clients
@@ -1038,9 +1038,6 @@ brew 'inetutils'
 
 # Shuttle: simple SSH shortcut menu
 cask 'shuttle'
-
-# FileZilla FTP client by Mozilla.
-cask 'filezilla'
 
 # Thunderbird email client by Mozilla.
 cask 'thunderbird'
@@ -1092,7 +1089,7 @@ cask 'charles'
 brew 'siege'
 
 # nmap network mapper is a security scanner
-cask 'nmap'
+brew 'nmap'
 
 # Certbot: automatically enable HTTPS on your website via Let's Encrypt
 brew 'certbot'
@@ -1185,7 +1182,7 @@ brew 'postgresql'
 cask 'postgres'
 
 # Postgres admin GUI
-brew 'pgadmin3'
+cask 'pgadmin3'
 
 # Prisma replaces traditional ORMs and adds GraphQL
 tap 'prisma/prisma'
