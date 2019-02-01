@@ -947,30 +947,36 @@ cask 'zoomus'
 #
 # We use the Mac App Store only when an app is not available
 # in a comparable way via brew install and/or brew cask.
+#
+# We comment out the "mas" commands below, because Apple has
+# changed the App Store capability for command line sign in.
+#
+# Feel free to uncomment any of the below commands that you
+# want, try them, and see if you're able to sign in manually.
 ##
 
 # Apple apps
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
+#mas 'Numbers', id: 409203825
+#mas 'Pages', id: 409201541
 
 # Our favorites
-mas "Apple Configurator 2", id: 1037126344
-mas "Blackmagic Disk Speed Test", id: 425264550
-mas "Brightness Slider", id: 456624497
-mas "Color Picker", id: 641027709
-mas "Deliveries", id: 924726344
-mas "Expressions", id: 913158085
-mas "InspectPNG", id: 498851708
-mas "PCalc", id: 403504866
-mas "Pixelmator", id: 407963104
-mas "Telegram", id: 747648890
-mas "Textual", id: 896450579
-mas "Trello", id: 1278508951
-mas "Tweetbot", id: 557168941
-mas 'Simplenote', id: 692867256
-mas 'Sip', id: 507257563
-mas 'Slack', id: 803453959
-mas 'Todoist', id: 585829637
+#mas "Apple Configurator 2", id: 1037126344
+#mas "Blackmagic Disk Speed Test", id: 425264550
+#mas "Brightness Slider", id: 456624497
+#mas "Color Picker", id: 641027709
+#mas "Deliveries", id: 924726344
+#mas "Expressions", id: 913158085
+#mas "InspectPNG", id: 498851708
+#mas "PCalc", id: 403504866
+#mas "Pixelmator", id: 407963104
+#mas "Telegram", id: 747648890
+#mas "Textual", id: 896450579
+#mas "Trello", id: 1278508951
+#mas "Tweetbot", id: 557168941
+#mas 'Simplenote', id: 692867256
+#mas 'Sip', id: 507257563
+#mas 'Slack', id: 803453959
+#mas 'Todoist', id: 585829637
 
 ##
 # brew-install-our-stacks-automatically.sh
