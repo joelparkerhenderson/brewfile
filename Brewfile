@@ -1481,9 +1481,6 @@ brew 'awless'
 # Heroku app hosting
 brew 'heroku'
 
-# corectl provides CoreOS over macOS made very simple
-cask 'corectl'
-
 ## Virtual machines
 
 # VirtualBox creates and configures portable development environments, by Oracle.
