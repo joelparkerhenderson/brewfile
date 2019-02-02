@@ -1481,9 +1481,6 @@ brew 'awless'
 # Heroku app hosting
 brew 'heroku'
 
-# Heroku hosting utilities
-cask 'heroku-toolbelt'
-
 # corectl provides CoreOS over macOS made very simple
 cask 'corectl'
 
