@@ -52,7 +52,7 @@
 # To use this Brewfile via `brew-file`, which has more capabilties than bundle:
 #
 #     $ brew install rcmdnk/file/brew-file
-#     $ brew file init                    
+#     $ brew file init
 #     Do you want to set a repository (y)? ((n) for local Brewfile). [y/n]: y
 #     Set repository, "non" for local Brewfile,
 #     <user>/<repo> for github repository,
@@ -1104,6 +1104,9 @@ brew 'certbot'
 # Pandoc converts among various formats, such as Markdown and HTML
 brew 'pandoc'
 
+## LaTex app that comes with lua(la)tex engines
+cask 'TeXShop'
+
 ## Markdown
 
 # MacDown simple markdown editor
@@ -1251,7 +1254,7 @@ brew 'elasticsearch'
 # Logstash helps parse, enrich, transform, and buffer data from a variety of sources.
 brew 'logstash'
 
-# Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. 
+# Kibana is an open source analytics and visualization platform designed to work with Elasticsearch.
 brew 'kibana'
 
 ##
