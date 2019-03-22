@@ -439,6 +439,10 @@ brew 'pcre++'
 # fd: a simple, fast and user-friendly alternative to find.
 brew 'fd'
 
+# RPM is the RedHat Package manager
+brew 'rpm'
+
+
 ##
 # File handling
 ##
@@ -465,6 +469,10 @@ brew 'p7zip'
 
 # GNU zip
 brew 'gzip'
+
+# RPM to CPIO converts a Red Hat RPM package file to a cpio archive
+brew 'rpm2cpio'
+
 
 ## Encryption & decryption
 
