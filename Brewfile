@@ -1195,6 +1195,9 @@ cask 'postgres'
 # Postgres admin GUI
 cask 'pgadmin3'
 
+# Postgres commmand line interface (CLI) with autocomplete
+brew 'pgcli'
+
 # Prisma replaces traditional ORMs and adds GraphQL
 tap 'prisma/prisma'
 brew 'prisma'
