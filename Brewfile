@@ -104,6 +104,7 @@
 
 # Tap homebrew
 tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
 tap 'homebrew/boneyard'
 tap 'homebrew/dev-tools'
@@ -113,7 +114,6 @@ tap 'homebrew/services'
 # Tap caskroom
 tap 'caskroom/cask'
 tap 'caskroom/drivers'
-tap 'caskroom/fonts'
 tap 'caskroom/versions'
 
 # Homebrew Cask extends Homebrew to install OS X applications and large binaries.
