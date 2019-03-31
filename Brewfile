@@ -135,6 +135,9 @@ brew 'cask'
 # Firefox web browser
 cask 'firefox'
 
+# Brave web browser, which features security by default.
+cask 'brave-browser'
+
 # Google Chrome web browser
 cask 'google-chrome'
 
