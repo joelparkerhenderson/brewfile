@@ -351,9 +351,10 @@ cask 'sourcetree'
 brew 'hg'
 
 # Subversion version control system.
-#
-# TODO: brew 'sqlite' && brew 'subversion'
-brew 'subversion'
+brew 'sqlite'; brew 'subversion'
+
+# Perforce merge tool for visual diffs and merges
+cask 'p4merge'
 
 ##
 # GNU command line tools
