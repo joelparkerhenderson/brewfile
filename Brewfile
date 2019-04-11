@@ -1624,9 +1624,6 @@ brew 'libiconv'
 # File magic number recognizer
 brew 'libmagic'
 
-# ncurses console nagivation
-brew 'libncurses'
-
 # Sodium secure cryptography
 brew 'libsodium'
 
