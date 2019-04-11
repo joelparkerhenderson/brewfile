@@ -113,9 +113,6 @@ tap 'homebrew/dev-tools'
 tap 'homebrew/bundle'
 tap 'homebrew/services'
 
-# Homebrew Cask extends Homebrew to install OS X applications and large binaries.
-brew 'cask'
-
 ###########################################################################
 #
 # SOFTWARE THAT IS TYPICALLY FINE FOR EVERYONE
