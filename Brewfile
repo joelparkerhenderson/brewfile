@@ -1628,7 +1628,7 @@ brew 'libmagic'
 brew 'libav'
 
 # Curl web fetcher
-brew 'libcurl'
+#brew 'libcurl'  # EOL
 
 # Foreign Function Interface Library
 brew 'libffi'
