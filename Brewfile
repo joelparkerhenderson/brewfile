@@ -1627,9 +1627,6 @@ brew 'libmagic'
 # Sodium secure cryptography
 brew 'libsodium'
 
-# Readline terminal input
-brew 'libreadline'
-
 # GNU libtool is a generic library support script.
 brew 'libtool'
 
