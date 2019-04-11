@@ -1409,9 +1409,8 @@ brew 'swiftlint'
 # SourceKitten attaches to SourceKit AST.
 brew 'sourcekitten'
 
-## Tk cross-platform toolkit
-
-brew 'tk'
+## Tcl/Tk cross-platform toolkit
+brew 'tcl-tk'
 
 ##
 # Programming processes
