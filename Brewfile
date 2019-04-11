@@ -606,9 +606,6 @@ brew 'graphviz'
 # Gnuplot is a portable command-line driven graphing utility.
 brew 'gnuplot'
 
-# Tap GUI
-tap 'homebrew/gui'
-
 # Jasper command line transcoder between JPEG2000 and other formats.
 brew 'jasper'
 
