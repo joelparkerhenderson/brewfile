@@ -1274,7 +1274,7 @@ brew 'kibana'
 ## Clojure
 
 # Clojure programming language compiler.
-brew 'clojure-compiler'
+brew 'clojure'
 
 # Leiningen automates Clojure projects.
 brew 'leiningen'
