@@ -1760,9 +1760,6 @@ brew 'gnu-indent'
 brew 'gnu-prolog'
 
 # TODO
-brew 'gnu-sed --default-names'
-
-# TODO
 brew 'gnu-smalltalk'
 
 # TODO
