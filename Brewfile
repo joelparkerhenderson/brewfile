@@ -1241,9 +1241,6 @@ cask 'realm-browser'
 # Sequel Pro database management application.
 cask 'sequel-pro'
 
-# Toad database manager by Dell.
-cask 'toad'
-
 # Realm browser for the Realm embedded database
 cask 'realm-browser'
 
