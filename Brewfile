@@ -1839,10 +1839,6 @@ brew 'tarsnap'
 #
 # You may prefer to trim this list.
 #
-# You may prefer to use tap, such as:
-#
-#      brew tap caskroom/fonts
-#      brew cask install font-inconsolata
 ##
 
 cask 'caskroom/fonts/font-3270'
@@ -1866,10 +1862,6 @@ cask 'caskroom/fonts/font-akronim'
 cask 'caskroom/fonts/font-aladin'
 cask 'caskroom/fonts/font-aldrich'
 cask 'caskroom/fonts/font-alef'
-cask 'caskroom/fonts/font-alegreya-sans-sc'
-cask 'caskroom/fonts/font-alegreya-sans'
-cask 'caskroom/fonts/font-alegreya-sc'
-cask 'caskroom/fonts/font-alegreya'
 cask 'caskroom/fonts/font-aleo'
 cask 'caskroom/fonts/font-alex-brush'
 cask 'caskroom/fonts/font-alfa-slab-one'
