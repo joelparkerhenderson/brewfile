@@ -1647,7 +1647,6 @@ brew 'yamllint'
 brew 'libjpg'
 brew 'libpng'
 brew 'libtiff'
-brew 'libwebp'
 
 ###########################################################################
 #
