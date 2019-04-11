@@ -1311,9 +1311,6 @@ brew 'gradle'
 # Maven is a Java build tool
 brew 'maven'
 
-# Spring Tool Suite is an Eclipse IDE for developing apps
-cask 'sts'
-
 # Jetty provides a Java web server and javax.servlet container
 brew 'jetty'
 
