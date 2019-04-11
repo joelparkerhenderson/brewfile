@@ -1083,9 +1083,9 @@ brew 'prettyping'
 
 # Wireshark network monitoring, with the QT GUI.
 brew 'cmake', link: true
-cask 'wireshark'  #TODO add this: args: ['with-qt']
 
 # Wireshark-chmodbft enables regular users to capture network packets.
+# Use this for typical macOS behaviors; use this insted of 'wireshark'.
 cask 'wireshark-chmodbpf'
 
 # Charles web debugging proxy
