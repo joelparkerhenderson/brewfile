@@ -1781,9 +1781,6 @@ brew 'gnu-which'
 brew 'google-app-engine'
 
 # TODO
-brew 'google-js-test'
-
-# TODO
 brew 'google-perftools'
 
 # TODO
