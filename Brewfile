@@ -1637,9 +1637,6 @@ brew 'libxslt'
 # High-level interface to X.509 and CMS (Cryptographic Message Syntax)
 brew 'libksba'
 
-# V8 JavaScript
-brew 'libv8'
-
 # YAML markup language
 brew 'libyaml'
 
@@ -3977,7 +3974,6 @@ cask 'caskroom/fonts/font-zeyada'
 # brew 'utimer'
 # brew 'uudeview'
 # brew 'uwsgi'
-# brew 'v8'
 # brew 'v8cgi'
 # brew 'vala'
 # brew 'valkyrie'
