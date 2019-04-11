@@ -1326,7 +1326,7 @@ brew 'glassfish'
 brew 'node'
 
 # PhantomJS is a headless WebKit scriptable with a JavaScript API.
-brew 'phantomjs'
+cask 'phantomjs'
 
 # V8 JavaScript Engine.
 brew 'v8'
