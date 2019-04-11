@@ -1325,9 +1325,6 @@ brew 'glassfish'
 # Node.js is a JavaScript platform for building fast, scalable network app.
 brew 'node'
 
-# PhantomJS is a headless WebKit scriptable with a JavaScript API.
-cask 'phantomjs'
-
 # V8 JavaScript Engine.
 brew 'v8'
 
@@ -1414,9 +1411,6 @@ brew 'swiftlint'
 
 # SourceKitten attaches to SourceKit AST.
 brew 'sourcekitten'
-
-# Testflight Apple iOS testing service
-cask 'testflight'
 
 ## Tk cross-platform toolkit
 
@@ -3506,7 +3500,6 @@ cask 'caskroom/fonts/font-zeyada'
 # brew 'pgdbf'
 # brew 'pgpool-ii'
 # brew 'pgtap'
-# brew 'phantomjs'
 # brew 'phash'
 # brew 'phoronix-test-suite'
 # brew 'phyml'
