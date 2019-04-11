@@ -581,8 +581,11 @@ cask 'shotcut'
 # Freemind mind map editor
 cask 'freemind'
 
-# yEd is desktop application to generate high-quality diagrams.
+# yEd is desktop application to generate high-quality diagrams
 cask 'yed'
+
+# Visualization Toolkit for manipulating and displaying scientific data
+brew 'vtk'
 
 ## ebooks
 
@@ -4016,7 +4019,6 @@ cask 'caskroom/fonts/font-zeyada'
 # brew 'vrpn'
 # brew 'vsftpd'
 # brew 'vte'
-# brew 'vtk'
 # brew 'w3m'
 # brew 'wait_on'
 # brew 'wakeonlan'
