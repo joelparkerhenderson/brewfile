@@ -1415,9 +1415,6 @@ brew 'swiftlint'
 # SourceKitten attaches to SourceKit AST.
 brew 'sourcekitten'
 
-# Taylor is a Swift code quality metrics tool.
-brew 'taylor'
-
 # Testflight Apple iOS testing service
 cask 'testflight'
 
