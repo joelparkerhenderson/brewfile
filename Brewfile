@@ -351,7 +351,7 @@ brew 'hg'
 brew 'sqlite'; brew 'subversion'
 
 # Perforce merge tool for visual diffs and merges
-cask 'p4merge'
+cask 'p4v'
 
 ##
 # GNU command line tools
