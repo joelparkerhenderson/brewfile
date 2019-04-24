@@ -239,21 +239,8 @@ brew 'vim'
 # MacVIM editor
 cask 'macvim'
 
-# Emacs editor
-cask 'emacs'
-
-## Emacs items that may help. TODO decide on these.
-#sudo rm /usr/bin/emacs &&
-#sudo rm -rf /usr/share/emacs &&
-#brew 'emacs --cocoa --srgb --use-git-head --HEAD &&'
-#ls -1 /usr/local/Cellar/emacs/*/bin/emacs |
-#tail -1 |
-#xargs -I{} sudo ln -sf "{}" /usr/bin/emacs
-
-# Emacs editor for Spacemacs
-# TODO: brew tap d12frosted/emacs-plus
+# Emacs editor with extra features; recommended by Spacemacs and Doom emacs
 brew 'emacs-plus'
-# brew linkapps emacs-plus
 
 # Atom editor by GitHub
 cask 'atom'
