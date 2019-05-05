@@ -1145,8 +1145,8 @@ cask 'eclipse-platform'
 # Databases
 #
 # This section installs many databases and database tooling:
-# Cassandra, CouchDB, Hadoop, MariaDB, PostgreSQL, RabbitMQ,
-# Redis, Riak, Sphinx, SQLite. Notably *not* MySQL.
+# Cassandra, CouchDB, MariaDB, PostgreSQL, RabbitMQ, Redis
+# Riak, Sphinx, SQLite. Notably *not* MySQL.
 ##
 
 # Cassandra database.
@@ -1156,7 +1156,7 @@ brew 'cassandra'
 brew 'couchdb'
 
 # Hadoop database.
-brew 'hadoop'
+#brew 'hadoop' # Disbled because it interferes with 'yarn'
 
 # MariaDB database; prefer this over MySQL.
 brew 'mariadb'
@@ -3414,7 +3414,6 @@ cask 'font-zeyada'
 # brew 'par'
 # brew 'par2'
 # brew 'par2tbb'
-# brew 'parallel'
 # brew 'pari'
 # brew 'parmetis'
 # brew 'parrot'
