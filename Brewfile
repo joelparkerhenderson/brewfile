@@ -1228,6 +1228,9 @@ brew 'xapian'
 brew 'cmake', link: true
 cask 'mysqlworkbench'
 
+# Liquibase database migration tool
+brew 'liquibase'
+
 # Realm browser mobile database editor.
 cask 'realm-browser'
 
