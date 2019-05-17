@@ -1068,6 +1068,9 @@ brew 'netcat'
 # prettyping: ping with colorful output and progress bars
 brew 'prettyping'
 
+# mtr: a better tool for ping and traceroute
+brew 'mtr'
+
 # Wireshark network monitoring, with the QT GUI.
 brew 'cmake', link: true
 
