@@ -1218,6 +1218,9 @@ brew 'sphinx'
 # Xapian is an open-source search engine library.
 brew 'xapian'
 
+# Miller is like awk, sed, cut, join, sort for data, CSV, TSV, etc.
+brew 'miller'
+
 ##
 # Database managers
 #
