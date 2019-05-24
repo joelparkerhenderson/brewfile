@@ -548,6 +548,9 @@ brew 'libtiff'
 # VLC media player
 cask 'vlc'
 
+# Airfoil: Wireless audio app with a free sound equalizer (EQ)
+cask 'airfoil'
+
 ## Multimedia editors
 
 # Gimp pixel-based image editor, similar to Adobe Photoshop
