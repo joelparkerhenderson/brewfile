@@ -543,13 +543,19 @@ brew 'libgphoto2'
 brew 'libpng'
 brew 'libtiff'
 
-## Multimedia layers
+## Multimedia players
 
 # VLC media player
 cask 'vlc'
 
+## Sound controls
+
 # Airfoil: Wireless audio app with a free sound equalizer (EQ)
-cask 'airfoil'
+#cask 'airfoil'
+
+# eqMac2: System-wide Audio Equalizer for the Mac; free open source
+cask 'eqmac'
+
 
 ## Multimedia editors
 
