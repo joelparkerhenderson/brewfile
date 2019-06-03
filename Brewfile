@@ -1050,6 +1050,9 @@ cask 'fugu'
 # Charles: enables a developer to view HTTP traffic.
 cask 'charles'
 
+# Postman: a complete API Development Environment.
+cask 'postman'
+
 ##
 # Languages
 ##
