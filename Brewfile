@@ -922,7 +922,7 @@ cask 'unison'
 #cask 'displaylink'
 
 # Karabiner remaps keyboard keys
-cask 'karabiner'
+cask 'karabiner-elements'
 
 # OSX FUSE file system
 cask 'osxfuse'
