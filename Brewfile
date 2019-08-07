@@ -545,8 +545,12 @@ brew 'libtiff'
 
 ## Multimedia players
 
+# Chafa image viewer using terminal emulator
+brew 'chafa'
+
 # VLC media player
 cask 'vlc'
+
 
 ## Sound controls
 
