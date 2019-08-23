@@ -1197,7 +1197,7 @@ brew 'postgresql'
 cask 'postgres'
 
 # Postgres admin GUI
-cask 'pgadmin3'
+cask 'pgadmin4'
 
 # DBeaver database manager, community edition
 cask 'dbeaver-community'
