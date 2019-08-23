@@ -1199,6 +1199,9 @@ cask 'postgres'
 # Postgres admin GUI
 cask 'pgadmin3'
 
+# DBeaver database manager, community edition
+cask 'dbeaver-community'
+
 # Postgres commmand line interface (CLI) with autocomplete
 brew 'pgcli'
 
