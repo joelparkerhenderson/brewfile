@@ -1057,6 +1057,9 @@ cask 'charles'
 # Postman: a complete API Development Environment.
 cask 'postman'
 
+# Insomnia: REST client for API testing.
+cask 'insomnia'
+
 ##
 # Languages
 ##
