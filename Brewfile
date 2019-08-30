@@ -123,11 +123,13 @@ tap 'homebrew/services'
 # Browsers
 #
 # We prefer Firefox because it's open source.
-# Google software including Chrome is in its own section.
 ##
 
 # Firefox web browser
 cask 'firefox'
+
+# Firefox developer edition, which features programming tools.
+cask 'firefox-developer-edition'
 
 # Brave web browser, which features security by default.
 cask 'brave-browser'
