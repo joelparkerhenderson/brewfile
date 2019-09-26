@@ -429,6 +429,9 @@ brew 'fd'
 # RPM is the RedHat Package manager
 brew 'rpm'
 
+# FZF is a command line fuzzy finder
+brew 'fzf'
+
 ##
 # Command line system operator helpers
 ##
