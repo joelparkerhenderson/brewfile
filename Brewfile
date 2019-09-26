@@ -430,11 +430,14 @@ brew 'fd'
 brew 'rpm'
 
 ##
-# Command line system operator tools
+# Command line system operator helpers
 ##
 
 # Navi is a command line cheat sheet navigator
-brew install denisidoro/tools/navi
+brew 'denisidoro/tools/navi'
+
+# e.g. is a command line examples
+brew 'eg-examples'
 
 ##
 # File handling
