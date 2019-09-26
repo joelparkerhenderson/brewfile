@@ -445,6 +445,9 @@ brew 'eg-examples'
 # TLDR provides simplified and community-driven man pages
 brew 'tldr'
 
+# howdoi shows instant coding answers via the command line
+brew 'howdoi'
+
 ##
 # File handling
 ##
