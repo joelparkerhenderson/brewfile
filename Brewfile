@@ -439,6 +439,9 @@ brew 'denisidoro/tools/navi'
 # e.g. is a command line examples
 brew 'eg-examples'
 
+# TLDR provides simplified and community-driven man pages
+brew 'tldr'
+
 ##
 # File handling
 ##
