@@ -429,6 +429,12 @@ brew 'fd'
 # RPM is the RedHat Package manager
 brew 'rpm'
 
+##
+# Command line system operator tools
+##
+
+# Navi is a command line cheat sheet navigator
+brew install denisidoro/tools/navi
 
 ##
 # File handling
