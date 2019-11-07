@@ -768,9 +768,6 @@ cask 'alfred'
 cask 'amazon-music'
 
 # TDB
-cask 'android-file-transfer'
-
-# TDB
 cask 'anki'
 
 # AppCleaner thoroughly uninstalls unwanted apps.
@@ -1146,6 +1143,9 @@ cask 'TeXShop'
 
 # MacDown simple markdown editor
 cask 'macdown'
+
+# MarkText free open source markdown editor
+cask 'mark-text'
 
 ## UML
 
