@@ -1358,6 +1358,14 @@ brew 'tomcat'
 # Glassfish application server.
 brew 'glassfish'
 
+# Android
+cask 'android-studio'
+cask 'android-file-transfer'
+cask 'android-messages'
+cask 'android-ndk'
+cask 'android-platform-tools'
+cask 'android-sdk'
+
 ## JavaScript
 
 # Node.js is a JavaScript platform for building fast, scalable network app.
