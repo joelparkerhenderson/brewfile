@@ -533,6 +533,9 @@ brew 'sift'
 # jq is a lightweight and flexible command-line JSON processor.
 brew 'jq'
 
+# yq is a lightweight and flexible command-line YAML processor.
+brew 'yq'
+
 # xsv is for CSV file parsing, and is fast, full featured, and flexible.
 brew 'xsv'
 
