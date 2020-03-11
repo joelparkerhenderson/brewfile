@@ -1523,6 +1523,9 @@ brew 'awscli'
 tap 'wallix/awless'
 brew 'awless'
 
+# Google Cloud Platform (GCP)
+brew 'gcloud'
+
 # Heroku app hosting
 brew 'heroku'
 
