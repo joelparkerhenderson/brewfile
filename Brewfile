@@ -1181,6 +1181,7 @@ brew 'libxslt'
 
 # Eclipse is a large programming IDE built on Java
 cask 'eclipse-ide'
+cask 'eclipse-java'
 cask 'eclipse-platform'
 
 # Netbeans Java IDE
@@ -1344,7 +1345,8 @@ brew 'cabal-install'
 ## Java
 
 # Java programming language
-cask 'java'
+# We prefer open source package 'openjdk' over Oracle cask 'java'
+brew 'openjdk'
 
 # Gradle is a Java build tool
 brew 'gradle'
