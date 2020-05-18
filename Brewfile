@@ -148,6 +148,22 @@ cask 'opera'
 #brew 'browsh'
 
 ##
+# Chat
+#
+# We favor Riot.im because it is free open source,
+# and also works closely with Mozilla foundation.
+##
+
+# Discord chat
+cask 'discord'
+
+# Riot.im chat client
+cask 'riot'
+
+# Slack chat client
+cask 'slack'
+
+##
 # Terminals
 #
 # We typically use `tmux`, `tmate`,
@@ -907,12 +923,6 @@ cask 'skitch'
 
 # Skype calling with video and phone calls.
 cask 'skype'
-
-# Discord chat
-cask 'discord'
-
-# Slack chat client
-cask 'slack'
 
 # TODO
 cask 'sleep-monitor'
