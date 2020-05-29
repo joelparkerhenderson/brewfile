@@ -91,9 +91,9 @@
 # ### Tracking
 #
 # * Package: https://github.com/joelparkerhenderson/brewfile
-# * Version: 3.0.0
+# * Version: 3.1.0
 # * Created: 2017-01-01
-# * Updated: 2019-01-28
+# * Updated: 2020-05-29
 # * License: GPL
 # * Contact: Joel Parker Henderson (http://joelparkerhenderson.com)
 ##
@@ -1570,8 +1570,11 @@ cask 'docker'
 
 ## Orchestration
 
-# Kubernetes Solo cluster for macOS
+# Kubernetes Solo cluster for macOS.
 cask 'kube-solo'
+
+# Run a single-node Kubernetes cluster in a virtual machine on your personal computer.
+brew 'minikube'
 
 ###########################################################################
 #
