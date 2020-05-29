@@ -1576,6 +1576,9 @@ cask 'docker'
 # Kubernetes Solo cluster for macOS.
 cask 'kube-solo'
 
+# Kubernetes command-line tool to run commands against Kubernetes clusters.
+brew 'kubectl'
+
 # Run a single-node Kubernetes cluster in a virtual machine on your personal computer.
 brew 'minikube'
 
