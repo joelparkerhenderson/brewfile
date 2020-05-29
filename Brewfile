@@ -1543,6 +1543,9 @@ brew 'heroku'
 
 ## Virtual machines
 
+# QEMU is a free and open-source emulator that performs hardware virtualization.
+brew 'qemu'
+
 # VirtualBox creates and configures portable development environments, by Oracle.
 cask 'virtualbox'
 
