@@ -176,6 +176,7 @@ cask 'iterm2'
 # Tmux is a newer terminal multiplexer.
 brew 'pkg-config', link: true
 brew 'tmux'
+brew 'reattach-to-user-namespace'
 
 # tmate is a fork of tmux that makes screen sharing friendlier.
 brew 'tmate'
