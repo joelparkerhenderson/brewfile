@@ -443,11 +443,14 @@ brew 'pcre++'
 # fd: a simple, fast and user-friendly alternative to find.
 brew 'fd'
 
-# RPM is the RedHat Package manager
+# RPM is the RedHat Package manager.
 brew 'rpm'
 
-# FZF is a command line fuzzy finder
+# FZF is a command line fuzzy finder.
 brew 'fzf'
+
+# The `z` command to `cd` among directories.
+brew 'zoxide'
 
 ##
 # Command line system operator helpers
