@@ -1202,6 +1202,13 @@ cask 'eclipse-platform'
 #cask 'netbeans'
 
 ##
+# Tooling
+##
+
+# Shared Compilation Cache
+brew 'sccache'
+
+##
 # Databases
 #
 # This section installs many databases and database tooling:
