@@ -132,16 +132,16 @@ cask 'firefox'
 cask 'firefox-developer-edition'
 
 # Brave web browser, which features security by default.
-cask 'brave-browser'
+#cask 'brave-browser'
 
 # Google Chrome web browser
 cask 'google-chrome'
 
+# Opera web browser
+#cask 'opera'
+
 # Lynx terminal web browser
 brew 'lynx'
-
-# Opera web browser
-cask 'opera'
 
 # Brow.sh text browser
 #tap 'browsh-org/homebrew-browsh'
@@ -182,7 +182,7 @@ brew 'reattach-to-user-namespace'
 brew 'tmate'
 
 # Screen is an older terminal multiplexer.
-brew 'screen'
+#brew 'screen'
 
 # ngrok opens a secure tunnel to localhost
 cask 'ngrok'
@@ -452,6 +452,9 @@ brew 'fzf'
 # The `z` command to `cd` among directories.
 brew 'zoxide'
 
+# jdupes: detect duplicate files
+brew 'jdupe'
+
 ##
 # Command line system operator helpers
 ##
@@ -636,7 +639,7 @@ cask 'calibre'
 cask 'kindle'
 
 # Adobe Air player for multimedia content
-cask 'adobe-air'
+#cask 'adobe-air'
 
 ## Misc
 
@@ -779,7 +782,7 @@ brew 'zlib'
 ##
 
 # Adium is an open source multi-protocol instant messaging client.
-cask 'adium'
+#cask 'adium'
 
 # TDB
 cask 'adventure'
@@ -815,7 +818,7 @@ cask 'balsamiq-mockups'
 cask 'bartender'
 
 # TDB
-cask 'basecamp'
+#cask 'basecamp'
 
 # TDB
 cask 'beacon-scanner'
@@ -851,7 +854,7 @@ cask 'duet'
 cask 'evernote'
 
 # TDB
-cask 'flash-player'
+#cask 'flash-player'
 
 # TDB
 cask 'fluid'
@@ -894,9 +897,6 @@ cask 'launchy'
 
 # TDB
 cask 'little-snitch'
-
-# TODO
-cask 'mysqlworkbench'
 
 # TODO
 cask 'paparazzi'
@@ -1236,16 +1236,7 @@ brew 'libmemcached'
 brew 'memcached'
 
 # PostgreSQL database.
-brew 'postgres'
-
-# PostgreSQL database.
 brew 'postgresql'
-
-# Postgres App provides a Mac-friendly database.
-cask 'postgres'
-
-# Postgres admin GUI
-cask 'pgadmin4'
 
 # DBeaver database manager, community edition
 cask 'dbeaver-community'
@@ -1278,7 +1269,6 @@ brew 'zeromq'
 
 # Sphinx search engine, which runs on top of MySQL and/or PostgreSQL.
 brew 'cmake', link: true
-brew 'mysql'
 brew 'postgresql'
 brew 'sphinx'
 
@@ -1290,13 +1280,7 @@ brew 'miller'
 
 ##
 # Database managers
-#
-# TODO: add pgadmin etc.
 ##
-
-# MySQL Workbench database editor.
-brew 'cmake', link: true
-cask 'mysqlworkbench'
 
 # Liquibase database migration tool
 brew 'liquibase'
