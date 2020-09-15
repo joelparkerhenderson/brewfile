@@ -530,6 +530,7 @@ brew 'syncthing'
 cask 'dropbox'
 
 # Transmission bittorrent client.
+brew 'transmission-cli'
 cask 'transmission'
 
 # Box.com sync
