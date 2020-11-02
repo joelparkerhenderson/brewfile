@@ -852,12 +852,6 @@ cask 'commandq'
 cask 'duet'
 
 # TDB
-cask 'evernote'
-
-# TDB
-#cask 'flash-player'
-
-# TDB
 cask 'fluid'
 
 # TDB
